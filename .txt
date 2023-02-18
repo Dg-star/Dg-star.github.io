@@ -1,2 +1,16 @@
 <a  style="text-decoration: none; position: relative;left: 2%; color: #000000;" href="https://dg-star.github.io/pudge/index.html">ABADDON</a>
 <a style="text-decoration: none; position: relative;left: 1.7%; color: #000000;" href="https://dg-star.github.io/pudge/index.html">PUDGE</a>
+<html><head></head><body><h1>Текст, появляющийся при наведении на картинку</h1>
+ <div class="block_1">
+   <div class="block_2">
+       <p>Очень интересный и продающий текст..</p>
+   </div>
+ </div>
+<style>
+body{background:rgb(243, 228, 228);text-align:center;}
+.block_1{width:1050px;height:300px;overflow:hidden;position:relative;margin:0 auto;background:url(http://coderistu.ru/wp-includes/images/pumpkin.jpg);background-size:cover}
+.block_2{position:absolute; visibility:hidden;left:1px;background:rgba(0, 0, 0, 0.4392156862745098);font-size:20px;color: white;width: 1050px;height: 300px;top:160px}
+.block_2 p {padding: 110px 0px;text-align: center;}
+.block_1:hover .block_2{visibility:visible;transition:1s;-webkit-transition:1s;transform:translatey(-160px);-webkit-transform:translatey(-160px)}
+.block_1:hover{filter:sepia(50%);-webkit-filter:sepia(60%);transition:0.6s;-webkit-transition:0.6s;}
+</style></body></html>
