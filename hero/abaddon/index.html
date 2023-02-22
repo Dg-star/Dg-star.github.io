@@ -47,7 +47,28 @@ body{background-size: cover;background-position: center center;background-attach
 	background-attachment: fixed;
 
 }
+.item {text-align: center;display: inline-block;overflow: hidden;position: relative;text-decoration: none;}
 
+.item:before {display: block;background-color: rgb(0, 0, 0);content: "";height: 100%;opacity: 0;position: absolute;width: 100%;z-index: 2;}
+
+.item:after {font-family: 'Lucida Console';color: white;content: attr(alt);display: block;font-size: 16px;opacity: 0;padding: 0 3%;position: absolute;text-transform: none;top: 50%;-webkit-transform-origin: 50% 0%;transform-origin: 50% 0%;-webkit-transform: scale(0) translateY(-50%);transform: scale(0) translateY(-50%);width: 94%;z-index: 3;}
+
+.item img {border: none;display: block;z-index: 1;}
+
+.item:after {-webkit-transition: all 350ms ease-in-out;transition: all 350ms ease-in-out;}
+
+.item:hover:before {opacity: 0.6;}
+
+.item:hover:after {opacity: 1;-webkit-transform: scale(1) translateY(-50%);transform: scale(1) translateY(-60%);}
+
+.overlay{
+	widht: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
 </style>
 	
 </head>
@@ -87,7 +108,7 @@ body{background-size: cover;background-position: center center;background-attach
 	<span>Окружает союзника щитом из тёмной энергии, который поглощает некоторое количество урона. Если щит пропадёт или его уничтожат, он взорвётся и нанесёт врагам вокруг урон, равный здоровью щита. Применение снимает с цели оглушение и большинство отрицательных эффектов.</span>
 	<br><br>
 	<img src="mana.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px; float: left; width: 50%">Расход маны: 85/100/115/130</div>
-	<img src="cooldown.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px">		Перезарядка: 12/10/8/6</div>
+	<img src="cooldown.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px">Перезарядка: 12/10/8/6</div>
 	<br>
 	<br>
 	<p style="line-height: 0.2em;"><b>Способность: </b>направленная на юнита</p>
@@ -128,7 +149,7 @@ body{background-size: cover;background-position: center center;background-attach
 	<img src="time.png" align="left" alt="img">
 	<span>Обращает весь получаемый урон в лечение. Применение снимает большинство отрицательных эффектов. Если способность готова, то она сработает автоматически, как только здоровье владельца упадёт ниже 400.</span>
 	<br><br>
-	<img src="cooldown.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px">		Перезарядка:  60/50/40 (Талант: 52/42/32)</div>
+	<img src="cooldown.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px">Перезарядка:  60/50/40 (Талант: 52/42/32)</div>
 	<br>
 	<br>
 	<p><b>Способность: </b>ненаправленная/аура (с Aghanim's Scepter)</p>
@@ -139,12 +160,37 @@ body{background-size: cover;background-position: center center;background-attach
 	<span style="font-size: 15px;font-family: Arial; color: gray; opacity: 0.8;">Эта сила, самая противоестественная из всех даров купели Аверно, бросает вызов пониманию смертных. Что должно ранить — лечит, а что должно убить — дает свежие силы.</span>
 	<hr style="border-color: blue;">
 	<h2 style="position: relative;text-align: left;">Сборка/Builds</h2>
+	<h3>Начальный закуп:</h3>
+	<a class="item" href="https://dota2.ru/items/tango/" title="" alt="Tango"><img src="item/tango.png" alt=""></a>
+	<a class="item" href="" title="https://dota2.ru/items/healing-salve/" alt="Flask"><img src="item/flask.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/quelling-blade/" title="" alt="Quelling Blade"><img src="item/blade.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/gauntlets-of-strength/" title="" alt="Gauntlets"><img src="item/gauntlets.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/iron-branch/" title="" alt="Iron Branch"><img src="item/branches.png" alt=""></a>
+	<h3>Основные предметы:</h3>
+	<a class="item" href="https://dota2.ru/items/phase-boots/" title="" alt="Phase Boots"><img src="item/phase.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/echo-sabre/" title="" alt="Echo Sabre"><img src="item/sabre.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/aghanims-shard/" title="" alt="Aghanim's Shard"><img src="item/shard.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/abyssal-blade/" title="" alt="Abyssal Blade"><img src="item/abyssal.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/black-king-bar/" title="" alt="Black King Bar"><img src="item/bkb.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/assault-cuirass/" title="" alt="Assault Cuirass"><img src="item/assault.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/satanic/" title="" alt="Satanic"><img src="item/satanic.png" alt=""></a>
+	
+	
+	<h3>YOUTUBE:GREYSHARK</h3>
+	<a class="item" href="https://dota2.ru/items/tome-of-knowledge/" title="" alt="Tome of Knowledge"><img src="item/tome.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/tome-of-knowledge/" title="" alt="Tome of Knowledge"><img src="item/tome.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/tome-of-knowledge/" title="" alt="Tome of Knowledge"><img src="item/tome.png" alt=""></a>
+	<br>
+	<a style="font-size: 25px; text-decoration: none; color: lightblue; text-align: left" href="https://www.youtube.com/@greyshark_official" >YOUTUBE:GREYSHARK</a>
+	<br>
+	<a style="font-size: 25px; text-decoration: none; color: lightblue;align: right;" href="https://steamcommunity.com/sharedfiles/filedetails/?id=2882612655&searchtext=abaddon" >ИСПОЛЬЗОВАТЬ ЭТОТ ИМБА БИЛД</a>
 	<hr style="border-color: blue;">
 	<a href="https://dota2.ru">  <img src="int.png" align="right"></a>
 	<br>
 	<br>
 	<a href="https://ci.nsu.ru">  <img src="vki.png" align="left"></a>
 	</div>
+
 </body>		
 </html>
 
