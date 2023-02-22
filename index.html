@@ -54,12 +54,22 @@ body{background-size: cover;background-position: center center;background-attach
 .hero:hover:before {opacity: 0.6;}
 
 .hero:hover:after {opacity: 1;-webkit-transform: scale(1) translateY(-50%);transform: scale(1) translateY(-60%);}
+
+.overlay{
+	widht: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
 </style>
 
 
 
 </head>
 <body>
+	<div class="overlay">
 	<h1 style="color: orangered;position: relative;text-align: center;">Welcome to Dota 2 Builds</h1>
 	<h5 style="color: orangered;position: relative;text-align: center;">created by 3 students</h2>
 	<hr style="border-color: red;">
@@ -210,5 +220,6 @@ body{background-size: cover;background-position: center center;background-attach
 	<br>
 	<br>
 	<a href="https://ci.nsu.ru">  <img src="vki.png" align="left"></a>
+</h5></div>
 </body>
 </html>
