@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Alchemist Builds</title>
@@ -23,12 +24,233 @@
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="icon/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
+<style>
+body,html{ height: 100%; color: yellow; font-family: Arial;margin: 0;}
+@media (min-width: 0px) {body {background: url(bgmobile.png);}}
 
+@media (min-width: 576px) {body {background: url(bgsm.png);}}
+
+@media (min-width: 768px) {body {background: url(bgmd.png);}}
+
+@media (min-width: 992px) {body {background: url(bglg.png);}}
+
+@media (min-width: 1200px) {body{background: url(bg.png);}}
+
+body{background-size: cover;background-position: center center;background-attachment: fixed;}
+.overlay{
+	widht: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	background-attachment: fixed;
+
+}
+.item {text-align: center;display: inline-block;overflow: hidden;position: relative;text-decoration: none;}
+
+.item:before {display: block;background-color: rgb(0, 0, 0);content: "";height: 100%;opacity: 0;position: absolute;width: 100%;z-index: 2;}
+
+.item:after {font-family: 'Lucida Console';color: white;content: attr(alt);display: block;font-size: 16px;opacity: 0;padding: 0 3%;position: absolute;text-transform: none;top: 50%;-webkit-transform-origin: 50% 0%;transform-origin: 50% 0%;-webkit-transform: scale(0) translateY(-50%);transform: scale(0) translateY(-50%);width: 94%;z-index: 3;}
+
+.item img {border: none;display: block;z-index: 1;}
+
+.item:after {-webkit-transition: all 350ms ease-in-out;transition: all 350ms ease-in-out;}
+
+.item:hover:before {opacity: 0.6;}
+
+.item:hover:after {opacity: 1;-webkit-transform: scale(1) translateY(-50%);transform: scale(1) translateY(-60%);}
+
+.overlay{
+	widht: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+.hr{
+	border-color: orange;
+}
+
+.skillicon{
+	border-radius: 10px;
+}
+</style>
 	
 </head>
 <body>
+	<div class="overlay">
 	<h1 style="position: relative;text-align: center;">Dota 2 Builds</h1>
-	<hr style="border-color: red;">
+	<hr class="hr">
 	<h2 style="position: relative;text-align: left;">Alchemist</h2>
-</body>
+	<hr class="hr">
+	<span style="font-size: 20px">Преданность священной алхимии была традицией рода Темноваров, но никто еще никогда не показывал столько изобретательности, амбиций и безрассудства, сколько проявил юный Раззил. Повзрослев, он оставил семейное дело и решил попробовать себя в производстве золота. В присущей ему манере он объявил, что обратит в золото целую гору. Спустя два десятилетия исследований, вложений и подготовок он с треском провалился, попав за решетку за множественные разрушения, причиненные экспериментом. Однако Раззил был не из робкого десятка и тщательно обдумывал варианты побега, чтобы продолжить свои исследования. Когда его новым сокамерником оказался свирепый великан-людоед, алхимик увидел в нем столь желанную возможность для побега. Уговорив гиганта не съедать его, Раззил начал тщательно составлять настойку из плесени и мха, найденных во время исправительных работ. Через неделю она созрела. Когда великан выпил зелье, он впал в ослепительную ярость, разорвал железные прутья, разнес стены и перебил всю стражу. Скоро они затерялись где-то в лесу, окружавшем город, оставив за собой следы разрушений и никаких признаков погони. Когда действие тоника отошло, людоед чувствовал себя вполне хорошо и выглядел счастливым и вполне энергичным. Решив работать вместе, с тех пор парочка собирает материалы, необходимые Раззилу, чтобы в очередной раз попытать удачу.</span>	
+	<hr class="hr">
+	<h2 style="position: relative;">Способности/Abulities</h2>
+	<hr class="hr">
+
+
+
+	<h2 style="position: relative;text-align: center;">Acid Spray</h2>	
+	<img class="skillicon" src="acid.png" align="left" alt="img">
+	<span>Распыляет в указанной области облако кислоты, которое наносит врагам периодический урон и снижает их броню.</span>
+	<br><br>
+	<img src="mana.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px; float: left; width: 50%">Расход маны: 130</div>
+	<img src="cooldown.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px">Перезарядка: 22</div>
+	<br><br><br>
+	<p style="line-height: 0.2em;"><b>Способность: </b>направленная на область/аура (с талантом)</p>
+	<p style="line-height: 0.2em;"><b>Действует на: </b>врагов/союзников (с талантом)</p>
+	<p><b>Тип урона: </b>физический</p>
+	<br>
+	<p style="line-height: 0.2em;"><b>Дальность применения: </b>900</p>
+	<p style="line-height: 0.2em;"><b>Радиус: </b>475/525/575/625</p>
+	<p style="line-height: 0.2em;"><b>Урон в секунду: </b> 20/25/30/35</p>
+	<p style="line-height: 0.2em;"><b>Снижение брони: </b>4/5/6/7 (<b>Талант:  </b>5/6/7/8)</p></p>
+	<p style="line-height: 0.2em;"><b>Длительность задержки ауры: </b>0,5</p>
+	<p style="line-height: 0.2em;"><b>Длительность: </b>16</p>
+	<p style="line-height: 0.2em;"><b>Процент бонуса брони союзников: </b>0 (<b>Талант:  </b>100%)</p></p>
+	<span style="font-size: 15px;font-family: Arial; color: gray; opacity: 0.8;">Используя семейные рецепты рода Темноваров, Раззил получает едкую кислоту, которая разрушает даже самые прочные металлы.</span>
+
+
+
+	<hr class="hr">
+	<h2 style="position: relative;text-align: center;">Unstable Concoction</h2>	
+	<img class="skillicon" src="unstable.png" align="left" alt="img">
+	<span>Герой начинает встряхивать колбу с гремучей смесью, которую можно бросить во вражеского героя. При попадании колба взорвётся, оглушив всех противников в радиусе взрыва и нанеся им урон. Чем дольше смесь встряхивать, тем больше урона она нанесёт и тем дольше будет оглушение. Пока герой не бросит колбу, он передвигается быстрее. Максимальный эффект достигается после 5 сек., однако если не выбросить колбу через 5,5 секунды, она взорвётся в руках героя, подействовав и на него самого.</span>
+	<br><br>
+	<img src="mana.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px; float: left; width: 50%">Расход маны: 85/100/115/130</div>
+	<img src="cooldown.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px">Перезарядка: 12/10/8/6</div>
+	<br><br><br>
+	<p style="line-height: 0.2em;"><b>Способность: </b>направленная на юнита</p>
+	<p style="line-height: 0.2em;"><b>Действует на: </b>союзников/врагов</p>
+	<p style="line-height: 0.2em;"><b>Тип урона: </b>магический</p>
+	<br>
+	<p style="line-height: 0.2em;"><b>Дальность применения: </b>550</p>
+	<p style="line-height: 0.2em;"><b>Радиус взрыва: </b>675</p>
+	<p><b>Поглощение урона: </b>110/140/170/200 (<b>Талант:  </b>210/240/270/300)</p></p>
+	<p><b>Урон по области: </b>110/140/170/200 (<b>Талант:  </b>210/240/270/300)</p></p>
+	<p style="line-height: 0.2em;"><b>Длительность: </b>15</p>
+	<span style="font-size: 15px;font-family: Arial; color: gray; opacity: 0.8;">Хоть превращение горы в золото и потерпело провал, благодаря ему была получена летучая микстура с разрушительным потенциалом.</span>
+	<hr class="hr">
+
+
+	<h2 style="position: relative;text-align: center;">Unstable Concoction Throw</h2>	
+	<img class="skillicon" src="throw.png" align="left" alt="img">
+	<br><br>
+	<br><br><br><br><br>
+	<p style="line-height: 0.2em;"><b>Способность: </b>направленная на юнита</p>
+	<p style="line-height: 0.2em;"><b>Действует на: </b>врагов</p>
+	<p style="line-height: 0.2em;"><b>Тип урона: </b>физический</p>
+	<br>
+	<p style="line-height: 0.2em;"><b>Дальность применения: </b>775</p>
+	<span style="font-size: 15px;font-family: Arial; color: gray; opacity: 0.8;">Бросайте, пока не взорвалось!</span>
+	<hr class="hr">
+
+
+
+	<h2 style="position: relative;text-align: center;">Greevil's Greed</h2>	
+	<img class="skillicon" src="greed.png" align="left" alt="img">
+	<span>Позволяет синтезировать больше золота из врагов и рун. Дополнительное золото за убийство существ состоит из начального бонуса и нарастающего, который увеличивается с каждым существом, убитым в течение 36 сек. после предыдущего. Также способность умножает золото от рун богатства.</span>
+	<br><br><br><br><br><br>
+	<p style="line-height: 0.2em;"><b>Способность: </b>Пассивная</p>
+	<p style="line-height: 0.2em;"><b>Действует на: </b>себя</p>
+	<p><b>Начальный бонус золота: </b>3</b></p>
+	<p><b>Доп. золото за стак: </b>3</p>
+	<br>
+	<p><b>Макс. доп. золото: </b>15/18/21/24</p>
+	<p style="line-height: 0.2em;"><b>Время между убийствами: </b>36</p>
+	<p style="line-height: 0.2em;"><b>Множитель руны богатства: </b>1,8/2,2/2,6/3</p>
+	<p><b>Бонус к урону от атаки за стак: </b>0 (<b>Талант:  </b>4,5)</p></p>
+	<p><b>Максимальный бонус к урону от атаки: </b>0 (<b>Талант:  </b>22,5/27/31,5/36)</p></p>
+	<span style="font-size: 15px;font-family: Arial; color: gray; opacity: 0.8;">Пускай эксперимент с горой и не удался, зато структуры поменьше Раззил легко обращает в звонкую монету.</span>
+	<hr class="hr">
+
+
+
+	<h2 style="position: relative;text-align: center;">Berserk Potion</h2>	
+	<img class="skillicon" src="potion.png" align="left" alt="img">
+	<span>Бросает в союзника зелье, которое применяет на него нормальное развеивание, увеличивает восстановление здоровья, а также ускоряет атаку и передвижение.</span>
+	<br><br>
+	<img src="mana.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px; float: left; width: 50%">Расход маны: 100</div>
+	<img src="cooldown.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px">Перезарядка: 35</div>
+	<br><br>
+	<br><br><br>
+	<p><b>Способность: </b>направленная на юнита</p>
+	<p style="line-height: 0.2em;"><b>Действует на: </b>союзников</p>
+	<p style="line-height: 0.2em;"><b>Дальность применения: </b>800</p>
+	<p style="line-height: 0.2em;"><b>Доп. скорость атаки: </b>50</p>
+	<p style="line-height: 0.2em;"><b>Восстановление здоровья: </b>40</p>
+	<p style="line-height: 0.2em;"><b>Доп. скорость передвижения: </b>30</p>
+	<p style="line-height: 0.2em;"><b>Длительность: </b>10</p>
+	<b>Для открытия способности требуется Aghanim's Shard.</b>
+	<hr class="hr">
+
+
+	<h2 style="position: relative;text-align: center;">Chemical Rage</h2>	
+	<img class="skillicon" src="rage.png" align="left" alt="img">
+	<span>Позволяет синтезировать больше золота из врагов и рун. Дополнительное золото за убийство существ состоит из начального бонуса и нарастающего, который увеличивается с каждым существом, убитым в течение 36 сек. после предыдущего. Также способность умножает золото от рун богатства.</span>
+	<br><br>
+	<img src="mana.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px; float: left; width: 50%">Расход маны: 100</div>
+	<img src="cooldown.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px">Перезарядка: 35</div>
+	<br><br>
+	<p style="line-height: 0.2em;"><b>Способность: </b>ненаправленная</p>
+	<p style="line-height: 0.2em;"><b>Действует на: </b>себя</p>
+	<p><b>Время трансформации: </b>0,35</p>
+	<p><b>Задержка перед атакой: </b>1,2/1,1/1 (<b>Талант:  </b>1,1/1/0,9)</p></p>
+	<p><b>Доп. регенерация здоровья </b>50/75/100 (<b>Талант:  </b>100/125/150)</p></p>
+	<p><b>Доп. скорость передвижения: </b>40/50/60 (<b>Талант:  </b>90/100/110)</p></p>
+	<p><b>Длительность: </b>30</p>
+	<span style="font-size: 15px;font-family: Arial; color: gray; opacity: 0.8;">Варево, которым Раззил напоил огра для побега из тюрьмы, стало полезным в сражении зельем.</span>
+	<hr class="hr">
+
+
+	<h2 style="position: relative;text-align: left;">Сборка/Builds</h2>
+	<h3>Начальный закуп:</h3>
+	<a class="item" href="https://dota2.ru/items/tango/" title="" alt="Tango"><img src="item/tango.png" alt=""></a>
+	<a class="item" href="" title="https://dota2.ru/items/healing-salve/" alt="Flask"><img src="item/flask.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/quelling-blade/" title="" alt="Quelling Blade"><img src="item/blade.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/gauntlets-of-strength/" title="" alt="Gauntlets"><img src="item/gauntlets.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/iron-branch/" title="" alt="Iron Branch"><img src="item/branches.png" alt=""></a>
+	<h3>Основные предметы:</h3>
+	<a class="item" href="https://dota2.ru/items/hand-of-midas/" title="" alt="Hand of Midas"><img src="item/midas.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/mjollnir/" title="" alt="Mjollnir"><img src="item/mjollnir.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/boots-of-travel/" title="" alt="Boots of Travel"><img src="item/travel.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/abyssal-blade/" title="" alt="Abyssal Blade"><img src="item/abyssal.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/black-king-bar/" title="" alt="Black King Bar"><img src="item/bkb.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/daedalus/" title="" alt="Daedalus"><img src="item/greater.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/assault-cuirass/" title="" alt="Assault Cuirass"><img src="item/assault.png" alt=""></a>
+	
+	
+	
+	<h3>YOUTUBE:GREYSHARK</h3>
+	<a class="item" href="https://dota2.ru/items/tome-of-knowledge/" title="" alt="Tome of Knowledge"><img src="item/tome.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/tome-of-knowledge/" title="" alt="Tome of Knowledge"><img src="item/tome.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/tome-of-knowledge/" title="" alt="Tome of Knowledge"><img src="item/tome.png" alt=""></a>
+	<br>
+	<a style="font-size: 25px; text-decoration: none; color: lightblue; text-align: left" href="https://www.youtube.com/@greyshark_official" >YOUTUBE:GREYSHARK</a>
+	<br>
+	<a style="font-size: 25px; text-decoration: none; color: lightblue;align: right;" href="https://steamcommunity.com/sharedfiles/filedetails/?id=147003111" >ССЫЛКА НА ЭТУ СБОРКУ STEAM</a>
+	<hr class="hr">
+	<a href="https://dota2.ru">  <img src="int.png" align="right"></a>
+	<br>
+	<br>
+	<a href="https://ci.nsu.ru">  <img src="vki.png" align="left"></a>
+	</div>
+
+</body>		
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
