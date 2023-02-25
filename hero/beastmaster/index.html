@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Beastmaster Builds</title>
@@ -23,12 +24,232 @@
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="icon/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
+<style>
+body,html{ height: 100%; color: lightblue; font-family: Arial;margin: 0;}
+@media (min-width: 0px) {body {background: url(bgmobile.png);}}
 
+@media (min-width: 576px) {body {background: url(bgsm.png);}}
+
+@media (min-width: 768px) {body {background: url(bgmd.png);}}
+
+@media (min-width: 992px) {body {background: url(bglg.png);}}
+
+@media (min-width: 1200px) {body{background: url(bg.png);}}
+
+body{background-size: cover;background-position: center center;background-attachment: fixed;}
+.overlay{
+	widht: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	background-attachment: fixed;
+
+}
+.item {text-align: center;display: inline-block;overflow: hidden;position: relative;text-decoration: none;}
+
+.item:before {display: block;background-color: rgb(0, 0, 0);content: "";height: 100%;opacity: 0;position: absolute;width: 100%;z-index: 2;}
+
+.item:after {font-family: 'Lucida Console';color: white;content: attr(alt);display: block;font-size: 16px;opacity: 0;padding: 0 3%;position: absolute;text-transform: none;top: 50%;-webkit-transform-origin: 50% 0%;transform-origin: 50% 0%;-webkit-transform: scale(0) translateY(-50%);transform: scale(0) translateY(-50%);width: 94%;z-index: 3;}
+
+.item img {border: none;display: block;z-index: 1;}
+
+.item:after {-webkit-transition: all 350ms ease-in-out;transition: all 350ms ease-in-out;}
+
+.item:hover:before {opacity: 0.6;}
+
+.item:hover:after {opacity: 1;-webkit-transform: scale(1) translateY(-50%);transform: scale(1) translateY(-60%);}
+
+.overlay{
+	widht: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+
+.hr{
+	border-color: brown;
+}
+
+.skillicon{
+	border-radius: 10px;
+}
+::-webkit-scrollbar{
+	width: 0;
+}
+
+.undertext{
+	font-size: 15px;
+	font-family: Arial;
+	color: gray;
+	opacity: 0.8;
+}
+</style>
 	
 </head>
 <body>
+	<div class="overlay">
 	<h1 style="position: relative;text-align: center;">Dota 2 Builds</h1>
-	<hr style="border-color: red;">
+	<hr class="hr">
 	<h2 style="position: relative;text-align: left;">Beastmaster</h2>
-</body>
+	<hr class="hr">
+	<span style="font-size: 20px">Детство Карроха прошло несладко. Мать его умерла при родах. Отца, кузнеца при последнем короле Слома, казнили, растоптав насмерть, когда ребенку было пять лет. Тогда Карроха поселили в королевский зверинец, где он рос среди животных из королевского зверинца: львов, обезьян, оленей-падунов и других, менее известных существ, в которых не всякий верил. На седьмой год жизни парня королевский лазутчик привел во дворец новую тварь. Ее подтащили к королю, закованную в цепи, и та заговорила, хоть и не двигала ртом. Просила она об одном: свободе. Король лишь рассмеялся и приказал зверю выступать ему на потеху, а когда тот отказался, огрел его своим Диким скипетром и приказал отправить тварь в темницу. Следующие месяцы мальчик тайком проносил к существу еду и лекарства, но они лишь слегка отодвигали полное истощение. Без слов зверь говорил с мальчиком, и со временем их связь усилилась настолько, что Каррох понял — он может поддерживать разговор. Более того, он научился общаться со всеми обитателями королевского зверинца. В ночь, когда зверь умер, мальчик впал в ярость. Он повел чудищ войной на прислужников короля, отперев клетки и выпустив зверей на дворцовые земли. В погроме был насмерть закусан, заклеван и зацарапан и сам последний король. Пока царила неразбериха, Каррох освободил одного из королевских оленей, и тот поклонился в ответ, а затем, с Каррохом на спине, перемахнул через высокие стены дворца, унося того из проклятого места. Теперь повелитель зверей Каррох по прозвищу Beastmaster уже взрослый мужчина, но он не потерял способности говорить с дикими зверьми. Сирота из королевского зверинца превратился в неукротимого воина природы.</span>	
+	<hr class="hr">
+	<h2 style="position: relative;">Способности/Abulities</h2>
+	<hr class="hr">
+	<h2 style="position: relative;text-align: center;">Wild Axes</h2>	
+	<img class="skillicon" src="axes.png" align="left" alt="img">
+	<span>Герой швыряет топоры, которые прорубают деревья и противников на своём пути и возвращаются обратно. Каждый топор задевает одного врага лишь единожды и увеличивает урон, получаемый от героя и его существ.</span>
+	<br>
+	<img src="mana.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px; float: left; width: 50%">Расход маны: 65</div>
+	<img src="cooldown.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px">Перезарядка: 8 (Талант: 3)</div>
+	<br><br>
+	<p style="line-height: 0.2em;"><b>Способность: </b>направленная на точку</p>
+	<p style="line-height: 0.2em;"><b>Действует на: </b>врагов</p>
+	<p style="line-height: 0.2em;"><b>Тип урона: </b>магический</p>
+	<br>
+	<p style="line-height: 0.2em;"><b>Дальность применения: </b>1500</p>
+	<p><b>Радиус: </b>175</p>
+	<p style="line-height: 0.2em;"><b>Дистанция полета топоров: </b>1500</p>
+	<p style="line-height: 0.2em;"><b>Расстояние разлета топоров: </b>450</p>
+	<p><b>Увеличение урона за эффект: </b>6/8/10/12% (<b>Талант:  </b>8,5/10,5/12,5/14,5%)</p>
+	<p style="line-height: 0.2em;"><b>Длительность эффекта: </b>12</p>
+	<span class="undertext">Учась в одиночку выживать в дикой природе, Каррох приноровился использовать два томагавка, одинаково хорошо справляясь и с деревьями, и с врагами.</span>
+
+
+
+	<hr class="hr">
+	<h2 style="position: relative;text-align: center;">Call of the Wild (Кабан)</h2>	
+	<img class="skillicon" src="kaban.png" align="left" alt="img">
+	<span>Герой призывает на поле битвы кабана-помощника.</span>
+	<br><br>
+	<img src="mana.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px; float: left; width: 50%">Расход маны: 60/65/70/75</div>
+	<img src="cooldown.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px">Перезарядка: 42/38/34/30</div>
+	<br><br><br><br>
+	<p style="line-height: 0.2em;"><b>Способность: </b>ненаправленная</p>	
+	<br>
+	<p style="line-height: 0.2em;"><b>Количество кабанов: </b>1</p>
+	<p style="line-height: 0.2em;"><b>Длительность жизни: </b>60</p>
+	<span class="undertext">Подружившись в детстве с удивительным зверем, Каррох научился взывать к помощи животных.</span>
+	<hr class="hr">
+
+
+	<h2 style="position: relative;text-align: center;">Call of the Wild (Ястреб)</h2>	
+	<img class="skillicon" src="yastreb.png" align="left" alt="img">
+	<span>Герой отправляет невидимого ястреба разведать территорию.</span>
+	<br><br>
+	<img src="mana.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px; float: left; width: 50%">Расход маны: 30</div>
+	<img src="cooldown.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px">Перезарядка: 60/50/40/30 (Aghanim's Shard: 50/40/30/20)</div>
+	<br><br>
+	<p><b>Способность: </b>направленная на область/юнита/автоприменение (с Aghanim's Shard)</p>
+	<p style="line-height: 0.2em;"><b>Действует на: </b>врагов (с Aghanim's Shard)</p>	
+	<br>	
+	<p style="line-height: 0.2em;"><b>Длительность жизни: </b>60</p>
+	<p style="line-height: 0.2em;"><b>Количество кабанов: </b>1</p>
+	<p style="line-height: 0.2em;"><b>Дальность применения: </b>глобальная</p>
+	<span class="undertext">Подружившись в детстве с удивительным зверем, Каррох научился взывать к помощи животных.</span>
+	<hr class="hr">
+
+
+
+	<h2 style="position: relative;text-align: center;">Inner Beast</h2>	
+	<img class="skillicon" src="beast.png" align="left" alt="img">
+	<span>Высвобождает животную ярость союзников неподалёку, увеличивая скорость их атак.</span>
+	<br><br><br><br><br><br><br>
+	<p style="line-height: 0.2em;"><b>Способность: </b>аура</p>
+	<p style="line-height: 0.2em;"><b>Действует на: </b>союзников</p>	
+	<br>	
+	<p style="line-height: 0.2em;"><b>Радиус: </b>1200</p>
+	<p><b>Дополнительная скорость атаки: </b>10/20/30/40 (<b>Талант: </b>20/30/40/50)</p>
+	<p style="line-height: 0.2em;"><b>Длительность задержки ауры: </b>0,5</p>
+	<span class="undertext">Способность пробуждать внутреннюю мощь других существ проявилась у Карроха ещё в тот день, когда король Слома сгинул в лапах своего зверинца.</span>
+	<hr class="hr">
+
+
+	<h2 style="position: relative;text-align: center;">Drums of Slom</h2>	
+	<img class="skillicon" src="drums.png" align="left" alt="img">
+	<span>Герой всё быстрее бьёт в свой барабан. Каждый удар наносит урон врагам вокруг и излечивает владельца способности и существ под его контролем на долю от наносимого урона. Герой не может бить в барабаны, если он обезмолвлен или оглушён.</span>
+	<br><br>
+	<img src="mana.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px; float: left; width: 50%">Расход маны: 100</div>
+	<img src="cooldown.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px">Перезарядка: 40</div>
+	<br><br>
+	<p style="line-height: 0.2em;"><b>Способность: </b>ненаправленная</p>
+	<p style="line-height: 0.2em;"><b>Действует на: </b>врагов/союзников</p>	
+	<p style="line-height: 0.2em;"><b>Тип урона: </b>магический</p>
+	<br>	
+	<p style="line-height: 0.2em;"><b>Радиус: </b>600</p>
+	<p style="line-height: 0.2em;"><b>Максимальное количество применений: </b>14</p>
+	<p style="line-height: 0.2em;"><b>Урон за интервал: </b>110</p>
+	<p style="line-height: 0.2em;"><b>Процент урона в виде исцеления (герой): </b>25%</p>
+	<p style="line-height: 0.2em;"><b>Процент урона в виде исцеления (крипы): </b>5%</p>
+	<p style="line-height: 0.2em;"><b>Длительность задержки ауры: </b>0</p>
+	<p style="line-height: 0.2em;"><b>Максимальная продолжительность: </b>6</p>
+	<span class="undertext">Ярость природы безвременна, и посвящённым в её секреты несложно пробудить эхо гнева, возликовавшего при крахе Слома</span>
+	<hr class="hr">
+
+
+
+	<h2 style="position: relative;text-align: center;">Primal Roar</h2>	
+	<img class="skillicon" src="roar.png" align="left" alt="img">
+	<span>Герой издаёт громогласный рык, который оглушает цель и раскидывает всех противников на пути к ней. Все задетые враги получают урон, а у отлетевших в стороны врагов снижается скорость атаки и передвижения. Также на 3 секунды скорость передвижения героя и его существ увеличивается на 40%.</span>
+	<br><br>
+	<img src="mana.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px; float: left; width: 50%">Расход маны: 150/175/200</div>
+	<img src="cooldown.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px">Перезарядка:  100/80/60 (Талант: 70/50/30)</div>
+	<p style="line-height: 0.2em;"><b>Способность: </b>направлена на врагов</p>
+	<p style="line-height: 0.2em;"><b>Действует на: </b>врагов</p>
+	<p style="line-height: 0.2em;"><b>Тип урона: </b>магический</p>
+	<br>
+	<p style="line-height: 0.2em;"><b>Дальность применения: </b>600</p>
+	<p style="line-height: 0.2em;"><b>Радиус дополнительной скорости: </b>900</p>
+	<p style="line-height: 0.2em;"><b>Радиус откидывания: </b>300</p>
+	<p style="line-height: 0.2em;"><b>Урон: </b>150/225/300</p>
+	<p style="line-height: 0.2em;"><b>Замедление скорости передвижения: </b>60%</p>
+	<p style="line-height: 0.2em;"><b>Замедление скорости атаки: </b>60</p>
+	<p style="line-height: 0.2em;"><b>Дополнительная скорость передвижения союзникам: </b>40%</p>
+	<p style="line-height: 0.2em;"><b>Длительность замедления: </b>3/3,5/4</p>
+	<p style="line-height: 0.2em;"><b>Расстояние откидывания: </b>450</p>
+	<p style="line-height: 0.2em;"><b>Длительность откидывания: </b>1</p>
+	<p style="line-height: 0.2em;"><b>Длительность оглушения: </b>3/3,5/4</p>
+	<p style="line-height: 0.2em;"><b>Длительность ускорения: </b>3/3,5/4</p>
+	<br>
+	<span class="undertext">Beastmaster научился сливать все свои первобытные инстинкты в оглушающий вопль, сеющий смятение в рядах противника.</span>
+	<hr class="hr">
+	<h2 style="position: relative;text-align: left;">Сборка/Builds</h2>
+	<h3>Начальный закуп:</h3>
+	<a class="item" href="https://dota2.ru/items/tango/" title="" alt="Tango"><img src="item/tango.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/tango/" title="" alt="Tango"><img src="item/tango.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/healing-salve/" alt="Healing Salve"><img src="item/flask.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/gauntlets-of-strength/" title="" alt="Gauntlets"><img src="item/gauntlets.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/iron-branch/" title="" alt="Iron Branch"><img src="item/branches.png" alt=""></a>
+	<h3>Основные предметы:</h3>
+	<a class="item" href="https://dota2.ru/items/phase-boots/" title="" alt="Phase Boots"><img src="item/phase.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/blink-dagger/" title="" alt="Blink Dagger"><img src="item/blink.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/blade-mail//" title="" alt="Blade Mail"><img src="item/blade_mail.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/aghanims-shard/" title="" alt="Aghanim's Shard"><img src="item/shard.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/crimson-guard/" title="" alt="Crimson Guard"><img src="item/crimson_guard.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/aghanims-scepter/" title="" alt="Aghanim's Scepter"><img src="item/ultimate_scepter.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/heart-of-tarrasque/" title="" alt="Heart of Tarrasque
+"><img src="item/heart.png" alt=""></a>
+	
+	
+	<h3>YOUTUBE:GREYSHARK</h3>
+	<a class="item" href="https://dota2.ru/items/tome-of-knowledge/" title="" alt="Tome of Knowledge"><img src="item/tome.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/tome-of-knowledge/" title="" alt="Tome of Knowledge"><img src="item/tome.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/tome-of-knowledge/" title="" alt="Tome of Knowledge"><img src="item/tome.png" alt=""></a>
+	<br>
+	<a style="font-size: 25px; text-decoration: none; color: lightblue; text-align: left" href="https://www.youtube.com/@greyshark_official" >YOUTUBE:GREYSHARK</a>
+	<br>
+	<a style="font-size: 25px; text-decoration: none; color: lightblue;align: right;" href="https://steamcommunity.com/sharedfiles/filedetails/?id=153351626" >
+	ЭТА СБОРКА В STEAM</a>
+	<hr class="hr">
+	<a href="https://dota2.ru">  <img src="int.png" align="right"></a>
+	<br>
+	<br>
+	<a href="https://ci.nsu.ru">  <img src="vki.png" align="left"></a>
+	</div>
+
+</body>		
 </html>
