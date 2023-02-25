@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Axe Builds</title>
@@ -23,12 +24,198 @@
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="icon/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
+<style>
+body,html{ height: 100%; color: lightblue; font-family: Arial;margin: 0;}
+@media (min-width: 0px) {body {background: url(bgmobile.png);}}
 
+@media (min-width: 576px) {body {background: url(bgsm.png);}}
 
+@media (min-width: 768px) {body {background: url(bgmd.png);}}
+
+@media (min-width: 992px) {body {background: url(bglg.png);}}
+
+@media (min-width: 1200px) {body{background: url(bg.png);}}
+
+body{background-size: cover;background-position: center center;background-attachment: fixed;}
+.overlay{
+	widht: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	background-attachment: fixed;
+
+}
+.item {text-align: center;display: inline-block;overflow: hidden;position: relative;text-decoration: none;}
+
+.item:before {display: block;background-color: rgb(0, 0, 0);content: "";height: 100%;opacity: 0;position: absolute;width: 100%;z-index: 2;}
+
+.item:after {font-family: 'Lucida Console';color: white;content: attr(alt);display: block;font-size: 16px;opacity: 0;padding: 0 3%;position: absolute;text-transform: none;top: 50%;-webkit-transform-origin: 50% 0%;transform-origin: 50% 0%;-webkit-transform: scale(0) translateY(-50%);transform: scale(0) translateY(-50%);width: 94%;z-index: 3;}
+
+.item img {border: none;display: block;z-index: 1;}
+
+.item:after {-webkit-transition: all 350ms ease-in-out;transition: all 350ms ease-in-out;}
+
+.item:hover:before {opacity: 0.6;}
+
+.item:hover:after {opacity: 1;-webkit-transform: scale(1) translateY(-50%);transform: scale(1) translateY(-60%);}
+
+.overlay{
+	widht: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+
+.hr{
+	border-color: red;
+}
+
+.skillicon{
+	border-radius: 10px;
+}
+</style>
+	
 </head>
 <body>
+	<div class="overlay">
 	<h1 style="position: relative;text-align: center;">Dota 2 Builds</h1>
-	<hr style="border-color: red;">
+	<hr class="hr">
 	<h2 style="position: relative;text-align: left;">Axe</h2>
-</body>
+	<hr class="hr">
+	<span style="font-size: 20px">Ещё будучи рядовым бугаем в армии Красного тумана, Могул-хан положил глаз на генеральский титул. Битву за битвой он самыми кровавыми способами доказывал собственное превосходство. Облегчало подъём в чинах и то, что без тени сомнения он мог обезглавить старшего по званию. В семилетней кампании на Тысячеболотье Могул-хан отличился в кровопролитных бойнях, и звезда его славы засияла еще ярче, но число соратников неизменно сокращалось. В ночь безоговорочной победы он провозгласил себя генералом Красного тумана, присвоив себе заодно и титул верховного военачальника. Однако теперь в его отряде не значилось ни одного воина. Множество бойцов было повержено врагом, но и от его топора погибло достаточно. Стоит ли говорить, что большинство солдат теперь ни за что не переманить под его знамена? Но Могул-хана это совсем не смущает, ведь он знает: один в поле воин.</span>	
+	<hr class="hr">
+	<h2 style="position: relative;">Способности/Abulities</h2>
+	<hr class="hr">
+	<h2 style="position: relative;text-align: center;">Berserker's Call</h2>	
+	<img class="skillicon" src="call.png" align="left" alt="img">
+	<span>Герой бросает вызов ближайшим врагам, заставляя их атаковать его, а также получает бонус к броне на время действия способности.</span>
+	<br><br>
+	<img src="mana.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px; float: left; width: 50%">Расход маны: 80/90/100/110</div>
+	<img src="cooldown.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px">Перезарядка: 17/15/13/11 (Aghanim's Scepter: 14/12/10/8)</div>
+	<br><br>
+	<p style="line-height: 0.2em;"><b>Способность: </b>ненаправленная</p>
+	<p style="line-height: 0.2em;"><b>Действует на: </b>врагов/себя</p>
+	<br>
+	<p><b>Радиус: </b>300 (<b>Талант: </b>400)</p>
+	<p style="line-height: 0.2em;"><b>Дополнительная броня: </b>25 (<b>Талант:  </b>33)</p></p>
+	<p style="line-height: 0.2em;"><b>Длительность:  </b>2/2,4/2,8/3,2</p>
+	<span style="font-size: 15px;font-family: Arial; color: gray; opacity: 0.8;">Могучий рёв Могул-хана вынуждает врагов вступить в заведомо проигранную схватку.</span>
+
+
+
+	<hr class="hr">
+	<h2 style="position: relative;text-align: center;">Battle Hunger</h2>	
+	<img class="skillicon" src="battle.png" align="left" alt="img">
+	<span>Приводит врага в бешенство, нанося ему урон, пока он кого-нибудь не убьёт или действие способности не закончится. Урон от способности увеличивается в зависимости от брони владельца способности. Скорость передвижения жертвы уменьшается, когда она не смотрит в сторону владельца способности.</span>
+	<br><br>
+	<img src="mana.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px; float: left; width: 50%">Расход маны: 50/60/70/80</div>
+	<img src="cooldown.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px">Перезарядка: 20/15/10/5</div>
+	<br><br><br>
+	<p style="line-height: 0.2em;"><b>Способность: </b>направленная на юнита</p>
+	<p style="line-height: 0.2em;"><b>Действует на: </b>врагов/себя (с Aghanim's Scepter)</p>
+	<p style="line-height: 0.2em;"><b>Тип урона: </b>физический</p>
+	<br>
+	<p style="line-height: 0.2em;"><b>Дальность применения: </b>700/775/850/925</p>
+	<p style="line-height: 0.2em;"><b>Базовый урон в секунду: </b>10/15/20/25</p>
+	<p><b>Множитель брони в урон в секунду: </b>100% (<b>Талант:  </b>200%)</p></p>
+	<p><b>Замедление передвижения: </b>11/19/27/35% (<b>Талант:  </b>23/31/39/47%)</p></p>
+	<p style="line-height: 0.2em;"><b>Множитель скорости/брони за не-героя: </b>0,5</p>
+	<p style="line-height: 0.2em;"><b>Угол поворота врага: </b>90°</p>
+	<p style="line-height: 0.2em;"><b>Длительность: </b>12</p>
+	<p><b>Доп. скорость передвижения за эффект: </b>0 (<b>Талант:  </b>12%)</p></p>
+	<span style="font-size: 15px;font-family: Arial; color: gray; opacity: 0.8;">Обычные герои не могут сопротивляться ярости Могул-хана, и она калечит их, пока они не выместят ее на ком-нибудь.</span>
+	<hr class="hr">
+
+
+
+	<h2 style="position: relative;text-align: center;">Counter Helix</h2>	
+	<img class="skillicon" src="helix.png" align="left" alt="img">
+	<span>Герой с некоторой вероятностью отвечает на удары противников, нанося чистый урон всем врагам вокруг себя.</span><br><br>
+	<img src="cooldown.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px">Перезарядка: 0,3</div>
+	<br><br><br><br>
+	<p style="line-height: 0.2em;"><b>Способность: </b>Пассивная</p>
+	<p style="line-height: 0.2em;"><b>Действует на: </b>врагов</p>
+	<p style="line-height: 0.2em;"><b>Тип урона: </b>чистый</p>
+	<br>
+	<p><b>Урон: </b>60/100/140/180 (<b>Талант:  </b>90/130/170/210)</p></p>
+	<p><b>Радиус: </b>275</p>
+	<p style="line-height: 0.2em;"><b>Шанс срабатывания: </b>17/18/19/20%</p>
+	<span style="font-size: 15px;font-family: Arial; color: gray; opacity: 0.8;">Могул-хан — сам себе войско.</span>
+	<hr class="hr">
+
+
+
+	<h2 style="position: relative;text-align: center;">Culling Blade</h2>	
+	<img class="skillicon" src="blade.png" align="left" alt="img">
+	<span>Герой находит слабую точку врага и наносит ему чистый урон. Если убить этой способностью вражеского героя, её перезарядка сбрасывается, броня её владельца навсегда увеличится, а он и его союзники поблизости временно получат дополнительную скорость передвижения.</span>
+	<br><br>
+	<img src="mana.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px; float: left; width: 50%">Расход маны: 100/125/150</div>
+	<img src="cooldown.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px">Перезарядка:  100/85/70</div>
+	<br><br><br>
+	<p><b>Способность: </b>направленная на юнита</p>
+	<p style="line-height: 0.2em;"><b>Действует на: </b>врагов/союзников</p>
+	<p style="line-height: 0.2em;"><b>Тип урона: </b>чистый/мгновенное убийство</p>
+	<p style="line-height: 0.2em;"><b>Дальность применения: </b>175</p>
+	<p style="line-height: 0.2em;"><b>Радиус ускорения при убийстве: </b>900</p>
+	<p><b>Урон/Порог убийства: </b>250/350/450 (<b>Талант:  </b>400/500/600)</p></p>
+	<p><b>Бонус к броне за убийство: </b>1/1,5/2 (<b>Талант:  </b>2/2,5/3)</p></p>
+	<p><b>Дополнительная скорость передвижения при убийстве: </b>20/25/30%</p>
+	<p style="line-height: 0.2em;"><b>Дополнительная скорость атаки при убийстве: </b>20/30/40</p>
+	<p style="line-height: 0.2em;"><b>Длительность ускорения при убийстве:  </b>6</p>
+	<br>
+	<span style="font-size: 15px;font-family: Arial; color: gray; opacity: 0.8;">Словно воплощение самой яростной битвы, Могул-хан жестоко расправляется с теми, кто осмелился дать ему бой.</span>
+	<hr class="hr">
+	<h2 style="position: relative;text-align: left;">Сборка/Builds</h2>
+	<h3>Начальный закуп:</h3>
+	<a class="item" href="https://dota2.ru/items/tango/" title="" alt="Tango"><img src="item/tango.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/tango/" title="" alt="Tango"><img src="item/tango.png" alt=""></a>
+	<a class="item" href="" title="https://dota2.ru/items/healing-salve/" alt="Flask"><img src="item/flask.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/gauntlets-of-strength/" title="" alt="Gauntlets"><img src="item/gauntlets.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/iron-branch/" title="" alt="Iron Branch"><img src="item/branches.png" alt=""></a>
+	<h3>Основные предметы:</h3>
+	<a class="item" href="https://dota2.ru/items/phase-boots/" title="" alt="Phase Boots"><img src="item/phase.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/blink-dagger/" title="" alt="Blink Dagger"><img src="item/blink.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/blade-mail//" title="" alt="Blade Mail"><img src="item/blade_mail.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/aghanims-shard/" title="" alt="Aghanim's Shard"><img src="item/shard.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/crimson-guard/" title="" alt="Crimson Guard"><img src="item/crimson_guard.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/aghanims-scepter/" title="" alt="Aghanim's Scepter"><img src="item/ultimate_scepter.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/heart-of-tarrasque/" title="" alt="Heart of Tarrasque
+"><img src="item/heart.png" alt=""></a>
+	
+	
+	<h3>YOUTUBE:GREYSHARK</h3>
+	<a class="item" href="https://dota2.ru/items/tome-of-knowledge/" title="" alt="Tome of Knowledge"><img src="item/tome.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/tome-of-knowledge/" title="" alt="Tome of Knowledge"><img src="item/tome.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/tome-of-knowledge/" title="" alt="Tome of Knowledge"><img src="item/tome.png" alt=""></a>
+	<br>
+	<a style="font-size: 25px; text-decoration: none; color: lightblue; text-align: left" href="https://www.youtube.com/@greyshark_official" >YOUTUBE:GREYSHARK</a>
+	<br>
+	<a style="font-size: 25px; text-decoration: none; color: lightblue;align: right;" href="https://steamcommunity.com/sharedfiles/filedetails/?id=153351626" >
+	ЭТА СБОРКА В STEAM</a>
+	<hr class="hr">
+	<a href="https://dota2.ru">  <img src="int.png" align="right"></a>
+	<br>
+	<br>
+	<a href="https://ci.nsu.ru">  <img src="vki.png" align="left"></a>
+	</div>
+
+</body>		
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
