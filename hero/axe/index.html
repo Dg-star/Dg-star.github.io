@@ -37,16 +37,7 @@ body,html{ height: 100%; color: darkred; font-family: Arial;margin: 0;}
 @media (min-width: 1200px) {body{background: url(bg.png);}}
 
 body{background-size: cover;background-position: center center;background-attachment: fixed;}
-.overlay{
-	widht: 100%;
-	background: rgba(0, 0, 0, 0.5);
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 0;
-	background-attachment: fixed;
 
-}
 .item {text-align: center;display: inline-block;overflow: hidden;position: relative;text-decoration: none;}
 
 .item:before {display: block;background-color: rgb(0, 0, 0);content: "";height: 100%;opacity: 0;position: absolute;width: 100%;z-index: 2;}
@@ -61,14 +52,6 @@ body{background-size: cover;background-position: center center;background-attach
 
 .item:hover:after {opacity: 1;-webkit-transform: scale(1) translateY(-50%);transform: scale(1) translateY(-60%);}
 
-.overlay{
-	widht: 100%;
-	background: rgba(0, 0, 0, 0.5);
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 0;
-}
 
 .hr{
 	border-color: red;
@@ -88,11 +71,60 @@ body{background-size: cover;background-position: center center;background-attach
 	color: gray;
 	opacity: 0.8;
 }
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    widht: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 </style>
 	
 </head>
 <body>
-	<div class="overlay">
+	<div id="main">
+	<span style="font-size:30px;cursor:pointer; color: red;" onclick="openNav()">☰ open</span>
 	<h1 style="position: relative;text-align: center;">Dota 2 Builds</h1>
 	<hr class="hr">
 	<h2 style="position: relative;text-align: left;">Axe</h2>
@@ -213,7 +245,30 @@ body{background-size: cover;background-position: center center;background-attach
 	<br>
 	<a href="https://ci.nsu.ru">  <img src="vki.png" align="left"></a>
 	</div>
+<div id="mySidenav" class="sidenav">
+  		<a style="color: red;" href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  		<a href="https://dg-star.github.io">Main Menu</a>
+  		<a href="https://dota2.ru">Dota 2.ru</a>
+  		<a href="https://ci.nsu.ru">VKI NSU</a>
+  		<a href="#">Support us</a>
+  		<a href="#">Contact</a>
+	</div>
+	
+</div>
 
+<script>
+	function openNav() {
+    	document.getElementById("mySidenav").style.width = "250px";
+    	document.getElementById("main").style.marginLeft = "250px";
+    	document.body.style.backgroundColor = "rgba(0,0,0,0.5)";
+	}
+
+	function closeNav() {
+    	document.getElementById("mySidenav").style.width = "0";
+    	document.getElementById("main").style.marginLeft= "0";
+    	document.body.style.backgroundColor = "white";
+	}
+</script>
 </body>		
 </html>
 

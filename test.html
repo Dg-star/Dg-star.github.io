@@ -1,72 +1,295 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-<meta charset="utf-8" />
-<title>Документ без названия</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Build Dota2</title>
+
+
+	<link rel="apple-touch-icon" sizes="57x57" href="icon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="icon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="icon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="icon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="icon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="icon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="icon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="icon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="icon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="icon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="icon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+	<link rel="manifest" href="icon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="icon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+
 <style>
-.hero {
-text-align: center;
-display: inline-block;
-overflow: hidden;
-position: relative;
-text-decoration: none;
-}
-.hero:before {
-display: block;
-background-color: rgb(0, 0, 0);
-content: "";
-height: 100%;
-opacity: 0;
-position: absolute;
-width: 100%;
-z-index: 2;
+html{ height: 100%; }
+
+body {background-color: black;color: black;}
+
+@media (min-width: 0px) {body {background: url(bgmobile.png);}}
+
+@media (min-width: 576px) {body {background: url(bgsm.png);}}
+
+@media (min-width: 768px) {body {background: url(bgmd.png);}}
+
+@media (min-width: 992px) {body {background: url(bglg.png);}}
+
+@media (min-width: 1200px) {body{background: url(bg.png);}}
+
+body{background-size: cover;background-position: center center;background-attachment: fixed;}
+.hero {text-align: center;display: inline-block;overflow: hidden;position: relative;text-decoration: none;}
+
+.hero:before {display: block;background-color: rgb(0, 0, 0);content: "";height: 100%;opacity: 0;position: absolute;width: 100%;z-index: 2;}
+
+.hero:after {font-family: 'Lucida Console';color: white;content: attr(alt);display: block;font-size: 16px;opacity: 0;padding: 0 3%;position: absolute;text-transform: none;top: 50%;-webkit-transform-origin: 50% 0%;transform-origin: 50% 0%;-webkit-transform: scale(0) translateY(-50%);transform: scale(0) translateY(-50%);width: 94%;z-index: 3;}
+
+.hero img {border: none;display: block;z-index: 1;}
+
+.hero:after {-webkit-transition: all 350ms ease-in-out;transition: all 350ms ease-in-out;}
+
+.hero:hover:before {opacity: 0.6;}
+
+.hero:hover:after {opacity: 1;-webkit-transform: scale(1) translateY(-50%);transform: scale(1) translateY(-60%);}
+
+.overlay{
+	widht: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
 }
 
-.hero:after {
-font-family: 'Lucida Console';
-color: white;
-content: attr(alt);
-display: block;
-font-size: 16px;
-opacity: 0;
-padding: 0 3%;
-position: absolute;
-text-transform: none;
-top: 50%;
--webkit-transform-origin: 50% 0%;
-transform-origin: 50% 0%;
--webkit-transform: scale(0) translateY(-50%);
-transform: scale(0) translateY(-50%);
-width: 94%;
-z-index: 3;
+::-webkit-scrollbar{
+	width: 0;
 }
 
-.hero img {
-border: none;
-display: block;
-z-index: 1;
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
 }
 
-.hero:after {
--webkit-transition: all 350ms ease-in-out;
-transition: all 350ms ease-in-out;
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
 }
 
-.hero:hover:before {
-opacity: 0.6;
+.sidenav a:hover {
+    color: #f1f1f1;
 }
 
-.hero:hover:after {
-opacity: 1;
--webkit-transform: scale(1) translateY(-50%);
-transform: scale(1) translateY(-50%);
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
 }
 
+#main {
+    transition: margin-left .5s;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 </style>
+
+
+
 </head>
 <body>
-<a class="hero" href="https://dg-star.github.io/hero/pudge/index.html" title="" alt="abaddon"><img src="image hero/abaddon.png"  alt=""></a>
-<a class="hero" href="https://dg-star.github.io/hero/pudge/index.html" title="" alt="pudge"><img src="image hero/pudge.png" alt=""></a>
+	
+	<div id="main">
+		
+	<span style="font-size:30px;cursor:pointer; color: red;" onclick="openNav()">☰ open</span>	
+	<h1 style="color: orangered;position: relative;text-align: center;">Welcome to Dota 2 Builds</h1>
+	<h5 style="color: orangered;position: relative;text-align: center;">created by 3 students</h2>
+	<hr style="border-color: red;">
+	<img src="atributes/icon-str.png"; align="left">
+	<p style="color: orangered;position: relative; left;">Сила/Strenght</p>
+	<hr style="border-color: red;">
+	<a class="hero" href="https://dg-star.github.io/hero/abaddon/index.html" title="" alt="Abaddon"><img src="image hero/abaddon.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/alchemist/index.html" title="" alt="Alchemist"><img src="image hero/alchemist.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/axe/index.html" title="" alt="Axe"><img src="image hero/axe.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/beastmaster/index.html" title="" alt="Beastmaster"><img src="image hero/beastmaster.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/brewmaster/index.html" title="" alt="Brewmaster"><img src="image hero/brewmaster.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/bristleback/index.html" title="" alt="Bristleback"><img src="image hero/bristleback.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/centaur warrunner/index.html" title="" alt="Centaur Warrunner"><img src="image hero/centaur warrunner.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/ck/index.html" title="" alt="Chaos Knight"><img src="image hero/ck.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/clockwerk/index.html" title="" alt="Clockwerk"><img src="image hero/clockwerk.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/dawnbreaker/index.html" title="" alt="Dawnbreaker"><img src="image hero/db.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/doom/index.html" title="" alt="Doom"><img src="image hero/doom.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/dragon knight/index.html" title="" alt="Dragon Knight"><img src="image hero/dk.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/earth spirit/index.html" title="" alt="Earth Spirit"><img src="image hero/es.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/earthshaker/index.html" title="" alt="Earthshaker"><img src="image hero/earthshaker.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/elder titan/index.html" title="" alt="Elder Titan"><img src="image hero/elder titan.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/huskar/index.html" title="" alt="Huskar"><img src="image hero/huskar.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/io/index.html" title="" alt="Io"><img src="image hero/io.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/kunkka/index.html" title="" alt="Kunkka"><img src="image hero/kunkka.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/lc/index.html" title="" alt="Legion Commander"><img src="image hero/lc.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/lifestealer/index.html" title="" alt="Lifestealer"><img src="image hero/lifestealer.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/lycan/index.html" title="" alt="Lycan"><img src="image hero/lycan.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/magnus/index.html" title="" alt="Magnus"><img src="image hero/magnus.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/marci/index.html" title="" alt="Marci"><img src="image hero/marci.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/mars/index.html" title="" alt="Mars"><img src="image hero/mars.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/earthshaker/index.html" title="" alt="Earthshaker"><img src="image hero/earthshaker.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/ns/index.html" title="" alt="Night Stalker"><img src="image hero/ns.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/omniknight/index.html" title="" alt="Omniknight"><img src="image hero/omniknight.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/phoenix/index.html" title="" alt="Phoenix"><img src="image hero/phoenix.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/primal beast/index.html" title="" alt="Primal Beast"><img src="image hero/primal beast.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/pudge/index.html" title="" alt="Pudge"><img src="image hero/pudge.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/sk/index.html" title="" alt="Sand King"><img src="image hero/sk.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/slardar/index.html" title="" alt="Slardar"><img src="image hero/slardar.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/snapfire/index.html" title="" alt="Snapfire"><img src="image hero/snapfire.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/baratrum/index.html" title="" alt="Spirit Breaker"><img src="image hero/baratrum.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/sven/index.html" title="" alt="Sven"><img src="image hero/sven.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/tidehunter/index.html" title="" alt="Tidehunter"><img src="image hero/tidehunter.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/timbersaw/index.html" title="" alt="Timbersaw"><img src="image hero/timbersaw.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/tiny/index.html" title="" alt="Tiny"><img src="image hero/tiny.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/treant protector/index.html" title="" alt="Treant Protector"><img src="image hero/treant protector.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/tusk/index.html" title="" alt="Tusk"><img src="image hero/tusk.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/underlord/index.html" title="" alt="Underlord"><img src="image hero/underlord.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/undying/index.html" title="" alt="Undying"><img src="image hero/undying.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/wk/index.html" title="" alt="Wraith King"><img src="image hero/wk.png" alt=""></a>
+	<hr style="border-color: red;">
 
+
+
+	<img src="atributes/icon-agi.png"; align="left">
+	<p style="color: orangered;position: relative; left;">Ловкость/Agility</p>
+	<hr style="border-color: red;">
+	<a class="hero" href="https://dg-star.github.io/hero/am/index.html" title="" alt="Anti-Mage"><img src="image hero/am.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/arc/index.html" title="" alt="Arc Warden"><img src="image hero/arc.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/bs/index.html" title="" alt="Bloodseeker"><img src="image hero/bs.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/bh/index.html" title="" alt="Bounty Hunter"><img src="image hero/bh.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/broda/index.html" title="" alt="Broodmother"><img src="image hero/broda.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/clinkz/index.html" title="" alt="Clinkz"><img src="image hero/clinkz.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/drow/index.html" title="" alt="Drow Ranger"><img src="image hero/drow.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/ember/index.html" title="" alt="Ember Spirit"><img src="image hero/ember.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/fvoid/index.html" title="" alt="Faceless Void"><img src="image hero/fvoid.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/gyro/index.html" title="" alt="Gyrocopter"><img src="image hero/gyro.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/belka/index.html" title="" alt="Hoodwing"><img src="image hero/belka.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/jug/index.html" title="" alt="Juggernaut"><img src="image hero/jug.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/druid/index.html" title="" alt="Lone Druid"><img src="image hero/druid.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/luna/index.html" title="" alt="Luna"><img src="image hero/luna.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/medusa/index.html" title="" alt="Medusa"><img src="image hero/medusa.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/meepo/index.html" title="" alt="Meepo"><img src="image hero/meepo.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/mirana/index.html" title="" alt="Mirana"><img src="image hero/mirana.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/mk/index.html" title="" alt="Monkey King"><img src="image hero/mk.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/morph/index.html" title="" alt="Morphling"><img src="image hero/morph.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/naga/index.html" title="" alt="Naga Siren"><img src="image hero/naga.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/nyx/index.html" title="" alt="Nyx Assassin"><img src="image hero/nyx.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/pang/index.html" title="" alt="Pangolier"><img src="image hero/pang.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/ph/index.html" title="" alt="Phantom Assassin"><img src="image hero/ph.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/pl/index.html" title="" alt="Phantom Lancer"><img src="image hero/pl.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/razor/index.html" title="" alt="Razor"><img src="image hero/razor.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/riki/index.html" title="" alt="Riki"><img src="image hero/riki.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/sf/index.html" title="" alt="Shadow Fiend"><img src="image hero/sf.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/slark/index.html" title="" alt="Slark"><img src="image hero/slark.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/sniper/index.html" title="" alt="Sniper"><img src="image hero/sniper.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/spectre/index.html" title="" alt="Spectre"><img src="image hero/spectre.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/templar/index.html" title="" alt="Templar Assassin"><img src="image hero/templar.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/terr/index.html" title="" alt="Terrorblade"><img src="image hero/terr.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/troll/index.html" title="" alt="Troll Warlord"><img src="image hero/troll.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/ursa/index.html" title="" alt="Ursa"><img src="image hero/ursa.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/venga/index.html" title="" alt="Vengeful Spirit"><img src="image hero/venga.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/venom/index.html" title="" alt="Venomancer"><img src="image hero/venom.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/viper/index.html" title="" alt="Viper"><img src="image hero/viper.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/weaver/index.html" title="" alt="Weaver"><img src="image hero/weaver.png" alt=""></a>
+	<hr style="border-color: red;">
+
+
+	<img src="atributes/icon-int.png"; align="left">
+	<p style="color: orangered;position: relative; left;">Интеллект/Intelligence</p>
+	<hr style="border-color: red;">
+	<a class="hero" href="https://dg-star.github.io/hero/app/index.html" title="" alt="Antient Apparation"><img src="image hero/app.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/bane/index.html" title="" alt="Bane"><img src="image hero/bane.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/bat/index.html" title="" alt="Batrider"><img src="image hero/bat.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/chen/index.html" title="" alt="Chen"><img src="image hero/chen.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/cm/index.html" title="" alt="Cristal Maiden"><img src="image hero/cm.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/ds/index.html" title="" alt="Dark Seer"><img src="image hero/ds.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/wilka/index.html" title="" alt="Dark Willow"><img src="image hero/wilka.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/dazzle/index.html" title="" alt="Dazzle"><img src="image hero/dazzle.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/dp/index.html" title="" alt="Death Prophet"><img src="image hero/dp.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/dis/index.html" title="" alt="Disraptor"><img src="image hero/dis.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/ench/index.html" title="" alt="Enchantress"><img src="image hero/encha.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/enigma/index.html" title="" alt="Enigma"><img src="image hero/enigma.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/grim/index.html" title="" alt="Grimstroke"><img src="image hero/grim.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/invoker/index.html" title="" alt="Invoker"><img src="image hero/invoker.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/jakiro/index.html" title="" alt="Jakiro"><img src="image hero/jakiro.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/kotl/index.html" title="" alt="Kepeer Of The Light"><img src="image hero/kotl.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/lesh/index.html" title="" alt="Leshrak"><img src="image hero/lesh.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/lich/index.html" title="" alt="Lich"><img src="image hero/lich.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/lina/index.html" title="" alt="Lina"><img src="image hero/lina.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/lion/index.html" title="" alt="Lion"><img src="image hero/lion.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/fura/index.html" title="" alt="Nature Prophet"><img src="image hero/fura.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/necr/index.html" title="" alt="Necrophos"><img src="image hero/necr.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/ogr/index.html" title="" alt="Ogre Mage"><img src="image hero/ogr.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/oracle/index.html" title="" alt="Oracle"><img src="image hero/oracle.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/od/index.html" title="" alt="Outworld Destroyer"><img src="image hero/od.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/puck/index.html" title="" alt="Puck"><img src="image hero/puck.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/pugna/index.html" title="" alt="Pugna"><img src="image hero/pugna.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/pain/index.html" title="" alt="Oueen of Pain"><img src="image hero/pain.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/rub/index.html" title="" alt="Rubick"><img src="image hero/rub.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/sd/index.html" title="" alt="Shadow Demon"><img src="image hero/sd.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/shaman/index.html" title="" alt="Shadow Shaman"><img src="image hero/shaman.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/silencer/index.html" title="" alt="Silencer"><img src="image hero/salo.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/skywrath mage/index.html" title="" alt="Skywrath Mage"><img src="image hero/petuh.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/storm spirit/index.html" title="" alt="Storm Spirit"><img src="image hero/storm.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/techies/index.html" title="" alt="Techies"><img src="image hero/tech.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/tinker/index.html" title="" alt="Tinker"><img src="image hero/tinker.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/visage/index.html" title="" alt="Visage"><img src="image hero/visage.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/void spirit/index.html" title="" alt="Void Spirit"><img src="image hero/svoid.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/warlock/index.html" title="" alt="Warlock"><img src="image hero/warl.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/windranger/index.html" title="" alt="Windranger"><img src="image hero/wind.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/winter wyvern/index.html" title="" alt="Winter Wyvern"><img src="image hero/wyvern.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/witch doctor/index.html" title="" alt="Witch Doctor"><img src="image hero/wd.png" alt=""></a>
+	<a class="hero" href="https://dg-star.github.io/hero/zeus/index.html" title="" alt="Zeus"><img src="image hero/zeus.png" alt=""></a>
+	<hr style="border-color: red;">	
+	<a href="https://dota2.ru">  <img src="int.png" align="right"></a>
+	<br>
+	<br>
+	<a href="https://ci.nsu.ru">  <img src="vki.png" align="left"></a>
+	<div id="mySidenav" class="sidenav">
+  		<a style="color: red;" href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  		<a href="https://dota2.ru">Dota 2.ru</a>
+  		<a href="https://ci.nsu.ru">VKI NSU</a>
+  		<a href="#">Clients</a>
+  		<a href="#">Contact</a>
+	</div>
+	
+</div>
+
+<script>
+	function openNav() {
+    	document.getElementById("mySidenav").style.width = "250px";
+    	document.getElementById("main").style.marginLeft = "250px";
+    	document.body.style.backgroundColor = "rgba(0,0,0,0.5)";
+	}
+
+	function closeNav() {
+    	document.getElementById("mySidenav").style.width = "0";
+    	document.getElementById("main").style.marginLeft= "0";
+    	document.body.style.backgroundColor = "white";
+	}
+</script>
+</h5></div>
 </body>
 </html>

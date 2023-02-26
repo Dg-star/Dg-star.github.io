@@ -55,8 +55,47 @@ body{background-size: cover;background-position: center center;background-attach
 
 .hero:hover:after {opacity: 1;-webkit-transform: scale(1) translateY(-50%);transform: scale(1) translateY(-60%);}
 
-.overlay{
-	widht: 100%;
+::-webkit-scrollbar{
+	width: 0;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    widht: 100%;
 	background: rgba(0, 0, 0, 0.5);
 	position: absolute;
 	top: 0;
@@ -64,25 +103,26 @@ body{background-size: cover;background-position: center center;background-attach
 	z-index: 0;
 }
 
-::-webkit-scrollbar{
-	width: 0;
-
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 </style>
 
 
 
 </head>
 <body>
-	<div class="overlay">
+	<div id="main">
+	<span style="font-size:30px;cursor:pointer; color: red;" onclick="openNav()">☰ open</span>	
 	<h1 style="color: orangered;position: relative;text-align: center;">Welcome to Dota 2 Builds</h1>
 	<h5 style="color: orangered;position: relative;text-align: center;">created by 3 students</h2>
-	
-
 	<hr style="border-color: red;">
 	<img src="atributes/icon-str.png"; align="left">
 	<p style="color: orangered;position: relative; left;">Сила/Strenght</p>
 	<hr style="border-color: red;">
-	<a class="hero"href="https://dg-star.github.io/hero/abaddon/index.html" title="" alt="Abaddon"><img src="image hero/abaddon.png" alt=""></a>
+
+
+	<a class="hero" href="https://dg-star.github.io/hero/abaddon/index.html" title="" alt="Abaddon"><img src="image hero/abaddon.png" alt=""></a>
 	<a class="hero" href="https://dg-star.github.io/hero/alchemist/index.html" title="" alt="Alchemist"><img src="image hero/alchemist.png" alt=""></a>
 	<a class="hero" href="https://dg-star.github.io/hero/axe/index.html" title="" alt="Axe"><img src="image hero/axe.png" alt=""></a>
 	<a class="hero" href="https://dg-star.github.io/hero/beastmaster/index.html" title="" alt="Beastmaster"><img src="image hero/beastmaster.png" alt=""></a>
@@ -224,6 +264,29 @@ body{background-size: cover;background-position: center center;background-attach
 	<br>
 	<br>
 	<a href="https://ci.nsu.ru">  <img src="vki.png" align="left"></a>
-</h5></div>
+	<div id="mySidenav" class="sidenav">
+  		<a style="color: red;" href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  		<a href="https://dota2.ru">Dota 2.ru</a>
+  		<a href="https://ci.nsu.ru">VKI NSU</a>
+  		<a href="#">Support us</a>
+  		<a href="#">Contact</a>
+	</div>
+	
+</div>
+
+<script>
+	function openNav() {
+    	document.getElementById("mySidenav").style.width = "250px";
+    	document.getElementById("main").style.marginLeft = "250px";
+    	document.body.style.backgroundColor = "rgba(0,0,0,0.5)";
+	}
+
+	function closeNav() {
+    	document.getElementById("mySidenav").style.width = "0";
+    	document.getElementById("main").style.marginLeft= "0";
+    	document.body.style.backgroundColor = "white";
+	}
+</script>
+</div>
 </body>
 </html>
