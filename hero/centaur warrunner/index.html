@@ -25,10 +25,288 @@
 	<meta name="theme-color" content="#ffffff">
 
 	
+<style>
+body,html{ height: 100%; color: sandybrown; font-family: Arial;margin: 0;}
+@media (min-width: 0px) {body {background: url(bgmobile.png);}}
+
+@media (min-width: 576px) {body {background: url(bgsm.png);}}
+
+@media (min-width: 768px) {body {background: url(bgmd.png);}}
+
+@media (min-width: 992px) {body {background: url(bglg.png);}}
+
+@media (min-width: 1200px) {body{background: url(bg.png);}}
+
+body{background-size: cover;background-position: center center;background-attachment: fixed;}
+
+.item {text-align: center;display: inline-block;overflow: hidden;position: relative;text-decoration: none;}
+
+.item:before {display: block;background-color: rgb(0, 0, 0);content: "";height: 100%;opacity: 0;position: absolute;width: 100%;z-index: 2;}
+
+.item:after {font-family: 'Lucida Console';color: white;content: attr(alt);display: block;font-size: 16px;opacity: 0;padding: 0 3%;position: absolute;text-transform: none;top: 50%;-webkit-transform-origin: 50% 0%;transform-origin: 50% 0%;-webkit-transform: scale(0) translateY(-50%);transform: scale(0) translateY(-50%);width: 94%;z-index: 3;}
+
+.item img {border: none;display: block;z-index: 1;}
+
+.item:after {-webkit-transition: all 350ms ease-in-out;transition: all 350ms ease-in-out;}
+
+.item:hover:before {opacity: 0.6;}
+
+.item:hover:after {opacity: 1;-webkit-transform: scale(1) translateY(-50%);transform: scale(1) translateY(-60%);}
+
+
+
+.hr{
+	border-color: saddlebrown;
+}
+
+.skillicon{
+	border-radius: 10px;
+}
+::-webkit-scrollbar{
+	width: 0;
+}
+
+.undertext{
+	font-size: 15px;
+	font-family: Arial;
+	color: gray;
+	opacity: 0.8;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    widht: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+</style>
+	
 </head>
 <body>
+	<div id="main">
+	<span style="font-size:30px;cursor:pointer; color: sandybrown;" onclick="openNav()">☰ open</span>
 	<h1 style="position: relative;text-align: center;">Dota 2 Builds</h1>
-	<hr style="border-color: red;">
-	<h2 style="position: relative;text-align: left;">Centaur Warrunner</h2>
-</body>
+	<hr class="hr">
+	<h2 style="position: relative;text-align: left;">Brewmaster</h2>
+	<hr class="hr">
+	<span style="font-size: 20px">Глубоко в Скулящих горах, в долине, что под Разрушенным городом, древний орден Ойо веками практиковал свои ритуалы священного помутнения, соединяясь с миром духов посредством грандиозных хмельных праздников. Рожденный плотской матерью от отца-небожителя, молодой Мангикс стал первым, кто совместил в себе таланты обеих линий. Он занимался с величайшими эстетами Ордена, со временем заполучив с прилежной верностью к напиткам право соревноваться за титул Хмелевара — высшего звания во всей спиртотворческой касте. Девять дней Мангикс сражался и пил до последнего, — оба аспекта были одинаково важны — стараясь одолеть и перепить старшего мастера. Девять ночей они шатались и крутились, спотыкались и наносили удар за ударом — и так до тех пор, пока воин постарше наконец не свалился на землю в пьяном ступоре, и его соперник был наречен новым Хмелеваром. Теперь новый, молодой Хмелевар взывает к силе предков Ойо, дабы те дали ему скорость в обращении с посохом. К своим предкам-небожителям он взывает, когда пользуется магией. И, подобно всем предыдущим Хмелеварам его родины, его послали путешествовать по миру с единственной целью. В бродяжничестве он постигает просвещение сквозь принятие алкоголя, пребывая в постоянных поисках ответа на древнюю духовную загадку; пытаясь надумать ту самую мысль, которая вновь воссоединит духовный и материальный миры..</span>	
+	<hr class="hr">
+	<h2 style="position: relative;">Способности/Abulities</h2>
+	<hr class="hr">
+	<h2 style="position: relative;text-align: center;">Thunder Clap</h2>	
+	<img class="skillicon" src="clap.png" align="left" alt="img">
+	<span>Сотрясает землю, нанося урон всем врагам в области действия, а также замедляя их атаки и передвижение.</span>
+	<br><br><br><br>
+	<img src="mana.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px; float: left; width: 50%">Расход маны: 90/100/110/120</div>
+	<img src="cooldown.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px">Перезарядка: 13</div>
+	<br>
+	<p style="line-height: 0.2em;"><b>Способность: </b>ненаправленная</p>
+	<p style="line-height: 0.2em;"><b>Действует на: </b>врагов</p>
+	<p style="line-height: 0.2em;"><b>Тип урона: </b>магический</p>
+	<br>
+	<p><b>Радиус: </b>400 (<b>Талант: </b>600)</p>
+	<p><b>Урон: </b>90/160/230/300</p>
+	<p style="line-height: 0.2em;"><b>Замедление скорости передвижения: </b>25/35/45/55%</p>
+	<p style="line-height: 0.2em;"><b>Замедление скорости атаки: </b>25/35/45/55</p>
+	<p style="line-height: 0.2em;"><b>Длительность замедления: </b>4</p>
+	<span class="undertext">Коли Магникс бьёт своей крепкой бочкой оземь — значит, быть веселью.</span>
+
+
+
+	<hr class="hr">
+	<h2 style="position: relative;text-align: center;">Cinder Brew</h2>	
+	<img class="skillicon" src="brew.png" align="left" alt="img">
+	<span>Обливает себя и врагов в указанной области алкоголем, отчего они передвигаются медленнее и загораются, получив урон от любого заклинания. Время действия на загоревшегося врага продлевается на 3 сек. Под эффектом этой способности усиливаются стойки от способности Drunken Brawler.</span>
+	<br><br>
+	<img src="mana.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px; float: left; width: 50%">Расход маны: 50/60/70/80</div>
+	<img src="cooldown.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px">Перезарядка: 20/17/14/11</div>
+	<br>
+	<p style="line-height: 0.2em;"><b>Способность: </b>направленная на область</p>
+	<p style="line-height: 0.2em;"><b>Действует на: </b>врагов/себя</p>
+	<br>
+	<p style="line-height: 0.2em;"><b>Дальность применения: </b>850</p>
+	<p style="line-height: 0.2em;"><b>Радиус: </b>400</p>
+	<p style="line-height: 0.2em;"><b>Замедление скорости передвижения: </b>24/28/32/36%</p>
+	<p><b>Суммарный урон: </b>80/160/240/320 (<b>Талант: </b>104/208/312/416)</p>
+	<p><b>Длительность: </b>5 (<b>Талант: </b>6,5)</p>
+	<p style="line-height: 0.2em;"><b>Длительность горения: </b>3</p>
+	<p><b>Длительность страха: </b>0 (<b>Талант: </b>1,5)</p>
+	<span class="undertext">Орден Ойо знает, как решить любую проблему: ещё по одной!</span>
+	<hr class="hr">
+
+
+	<h2 style="position: relative;text-align: center;">Drunken Brawler</h2>	
+	<img class="skillicon" src="brawler.png" align="left" alt="img">
+	<span>Герой может менять стойку в зависимости от элементов, которыми он управляет, и получать за это пассивные бонусы, усиливающиеся под действием способности Cinder Brew. Боец земли — даёт +1/3/5/7 к броне и +5/10/15/20% к сопротивлению магии. Под эффектом Cinder Brew бонусы умножаются на 3. Боец шторма — даёт +15/20/25/30% к уклонению и +5/7/9/11% к скорости передвижения. Под эффектом Cinder Brew бонусы умножаются на 3. Боец огня — даёт шанс в 24% нанести критической атакой 145/160/175/190% урона. Под эффектом Cinder Brew шанс умножается на 3.</span>
+	<br><br><br>
+	<img src="mana.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px; float: left; width: 50%">Расход маны: 30</div>
+	<img src="cooldown.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px">Перезарядка: 60/50/40/30 (Aghanim's Shard: 50/40/30/20)</div>
+	<br><br>
+	<p><b>Способность: </b>ненаправленная</p>
+	<p style="line-height: 0.2em;"><b>Действует на: </b>себя/врагов (с Aghanim's Shard)</p>	
+	<br>	
+	<p style="line-height: 0.2em;"><b>Бонус к броне в стойке земли: </b>1/3/5/7</p>
+	<p style="line-height: 0.2em;"><b>Бонус сопротивления магии в стойке земли: </b>5/10/15/20%</p>
+	<p style="line-height: 0.2em;"><b>Уклонение в стойке шторма: </b>15/20/25/30%</p>
+	<p style="line-height: 0.2em;"><b>Бонус к скорости передвижения в стойке шторма: </b>5/7/9/11%</p>
+	<p style="line-height: 0.2em;"><b>Шанс срабатывания в стойке огня: </b>24%</p>
+	<p style="line-height: 0.2em;"><b>Критический урон в огненной стойке: </b>45/160/175/190%</p>
+	<p><b>Cinder Brew множитель: </b>3 (<b>Талант: </b>4)</p>
+	<span class="undertext">Получив титул Хмелевара ордена Ойо, Мангикс также доказал всем, что он мастер опьянения.</span>
+	<hr class="hr">
+
+
+
+	<h2 style="position: relative;text-align: center;">Primal Companion</h2>	
+	<img class="skillicon" src="primal.png" align="left" alt="img">
+	<span>Создаёт одного из воинов в зависимости от текущей стойки Drunken Brawler. Все способности воина перезаряжаются на 100% медленнее. Если воин окажется на расстоянии более 1600 от владельца, то не сможет применять способности и будет замедлен на 50%. Нового воина нельзя призвать, если существующий получал урон от врагов в последние 3 сек. Если воин умрёт, способность уйдёт на перезарядку в 70 сек. Одновременно может существовать только один воин. Он исчезнет, если применить способность Primal Split.</span>
+	<br><br><br>
+	<img src="mana.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px; float: left; width: 50%">Расход маны: 50</div>
+	<img src="cooldown.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px">Перезарядка: 20/70</div>
+	<br>
+	<p style="line-height: 0.2em;"><b>Способность: </b>ненаправленная</p>
+	<p style="line-height: 0.2em;"><b>Действует на: </b>себя</p>	
+	<br>	
+	<p style="line-height: 0.2em;"><b>Штрафное расстояние: </b>1600</p>
+	<p style="line-height: 0.2em;"><b>Количество воинов: </b>1</p>
+	<p style="line-height: 0.2em;"><b>Замедление скорости передвижения воинов: </b>50%</p>
+	<p style="line-height: 0.2em;"><b>Штраф к перезарядки за смерть: </b>50</p>
+	<p style="line-height: 0.2em;"><b>Перезарядка при получении урона: </b>3</p>
+	<p style="line-height: 0.2em;"><b>Продолжительность: </b>постоянная</p>
+	<span class="undertext">Мангикс смутно припоминает размышления старого учителя о том, что раздобыть товарища всяко лучше, чем пить в одиночку. Но не то чтобы Хмелевар строго придерживается этого принципа.</span>
+	<hr class="hr">
+
+
+	<h2 style="position: relative;text-align: center;">Primal Split</h2>	
+	<img class="skillicon" src="split.png" align="left" alt="img">
+	<span>Герой разделяется на трёх выносливых воинов-элементалей. Если хотя бы один из них доживёт до окончания действия способности, герою вернётся его прежний облик.</span>
+	<br><br>
+	<img src="mana.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px; float: left; width: 50%">Расход маны: 125/150/175</div>
+	<img src="cooldown.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px">Перезарядка:  140/130/120
+	<br><br><br><br>
+	
+	<p style="line-height: 0.2em;"><b>Способность: </b>ненаправленная</p>
+	<p style="line-height: 0.2em;"><b>Действует на: </b>себя</p>
+	<p style="line-height: 0.2em;"><b>Тип урона: </b>мгновенное убийство</p>
+	<br>
+	<p style="line-height: 0.2em;"><b>Длительность: </b>16/18/20</p>
+	<p style="line-height: 0.2em;"><b>Время разделения: </b>0,6</p>
+	<br>
+	<span class="undertext">Не ясно, осознает ли Мангикс свою могучую связь с природой, ибо она чаще всего проявляется во время пьянки.</span>
+	<hr class="hr">
+	<h2 style="position: relative;text-align: left;">Сборка/Builds</h2>
+
+
+	<h3>Starting items:</h3>
+	<a class="item" href="https://dota2.ru/items/tango/" title="" alt="Tango"><img src="item/tango.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/observer-ward/" title="" alt="Observer Ward"><img src="item/ward_observer.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/enchanted-mango/" title="" alt="Enchanted Mango"><img src="item/mango.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/iron-branch/" title="" alt="Iron Branch"><img src="item/branches.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/iron-branch/" title="" alt="Iron Branch"><img src="item/branches.png" alt=""></a>
+
+
+	<h3>Early game:</h3>
+	<a class="item" href="https://dota2.ru/items/tranquil-boots/" title="" alt="Tranquil Boots"><img src="item/tranquil_boots.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/magic-wand/" title="" alt="Magic Wand"><img src="item/magic_wand.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/urn-of-shadows/" title="" alt="Urn of Shadows"><img src="item/urn_of_shadows.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/vladmirs-offering/" title="" alt="Vladmir's Offering"><img src="item/vladmir.png" alt=""></a>
+	
+
+	<h3>Items situacionais:</h3>
+	<a class="item" href="https://dota2.ru/items/blink-dagger/" title="" alt="Blink Dagger"><img src="item/blink.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/euls-scepter-of-divinity/" title="" alt="Eul's Scepter of Divinity"><img src="item/eyl.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/pipe-of-insight/" title="" alt="Pipe of Insight"><img src="item/pipe.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/glimmer-cape/" title="" alt="Glimmer Cape"><img src="item/glimmer_cape.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/lotus-orb/" title="" alt="Lotus Orb"><img src="item/lotus_orb.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/drum-of-endurance/" title="" alt="Drum of Endurance"><img src="item/ancient_janggo.png" alt=""></a>
+
+
+	<h3>Support:</h3>
+	<a class="item" href="https://dota2.ru/items/observer-ward/" title="" alt="Observer Ward"><img src="item/ward_observer.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/sentry-ward/" title="" alt="Sentry Ward"><img src="item/ward_sentry.png" alt=""></a>
+
+	<a class="item" href="https://dota2.ru/items/smoke-of-deceit/" title="" alt="Smoke of Deceit"><img src="item/smoke_of_deceit.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/dust-of-appearance/" title="" alt="Dust of Appearance"><img src="item/dust.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/gem-of-true-sight/" title="" alt="Gem of True Sight"><img src="item/gem.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/tome-of-knowledge/" title="" alt="Tome of Knowledge"><img src="item/tome.png" alt=""></a>
+
+	<h3>Luxury:</h3>
+	<a class="item" href="https://dota2.ru/items/scythe-of-vyse/" title="" alt="Scythe of Vyse"><img src="item/hex.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/shivas-guard/" title="" alt="Shiva's Guard"><img src="item/shivas_guard.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/aghanims-scepter/" title="" alt="Aghanim's Scepter"><img src="item/ultimate_scepter.png" alt=""></a>
+	<br>
+	<a style="font-size: 25px; text-decoration: none; color: lightblue;align: right;" href="https://steamcommunity.com/sharedfiles/filedetails/?id=1763670749">
+	ЭТА СБОРКА В STEAM</a>
+	<hr class="hr">
+	<a href="https://dota2.ru">  <img src="int.png" align="right"></a>
+	<br>
+	<br>
+	<a href="https://ci.nsu.ru">  <img src="vki.png" align="left"></a>
+	</div>
+<div id="mySidenav" class="sidenav">
+  		<a style="color: sandybrown;" href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  		<a href="https://dg-star.github.io">Main Menu</a>
+  		<a href="https://dota2.ru">Dota 2.ru</a>
+  		<a href="https://ci.nsu.ru">VKI NSU</a>
+  		<a href="#">Support us</a>
+  		<a href="https://dg-star.github.io/contact/contact.html">Contact</a>
+	</div>
+	
+</div>
+
+<script>
+	function openNav() {
+    	document.getElementById("mySidenav").style.width = "250px";
+    	document.getElementById("main").style.marginLeft = "250px";
+    	document.body.style.backgroundColor = "rgba(0,0,0,0.5)";
+	}
+
+	function closeNav() {
+    	document.getElementById("mySidenav").style.width = "0";
+    	document.getElementById("main").style.marginLeft= "0";
+    	document.body.style.backgroundColor = "white";
+	}
+</script>
+</body>		
 </html>
