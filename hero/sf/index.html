@@ -24,11 +24,285 @@
 	<meta name="msapplication-TileImage" content="icon/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
 
+	
+<style>
+body,html{ height: 100%; color: orange; font-family: Arial;margin: 0;}
+@media (min-width: 0px) {body {background: url(bgmobile.png);}}
 
+@media (min-width: 576px) {body {background: url(bgsm.png);}}
+
+@media (min-width: 768px) {body {background: url(bgmd.png);}}
+
+@media (min-width: 992px) {body {background: url(bglg.png);}}
+
+@media (min-width: 1200px) {body{background: url(bg.png);}}
+
+body{background-size: cover;background-position: center center;background-attachment: fixed;}
+
+.item {text-align: center;display: inline-block;overflow: hidden;position: relative;text-decoration: none;}
+
+.item:before {display: block;background-color: rgb(0, 0, 0);content: "";height: 100%;opacity: 0;position: absolute;width: 100%;z-index: 2;}
+
+.item:after {font-family: 'Lucida Console';color: white;content: attr(alt);display: block;font-size: 16px;opacity: 0;padding: 0 3%;position: absolute;text-transform: none;top: 50%;-webkit-transform-origin: 50% 0%;transform-origin: 50% 0%;-webkit-transform: scale(0) translateY(-50%);transform: scale(0) translateY(-50%);width: 94%;z-index: 3;}
+
+.item img {border: none;display: block;z-index: 1;}
+
+.item:after {-webkit-transition: all 350ms ease-in-out;transition: all 350ms ease-in-out;}
+
+.item:hover:before {opacity: 0.6;}
+
+.item:hover:after {opacity: 1;-webkit-transform: scale(1) translateY(-50%);transform: scale(1) translateY(-60%);}
+
+
+
+.hr{
+	border-color: orange;
+}
+
+.skillicon{
+	border-radius: 10px;
+}
+::-webkit-scrollbar{
+	width: 0;
+}
+
+.undertext{
+	font-size: 15px;
+	font-family: Arial;
+	color: gray;
+	opacity: 0.8;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    widht: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+</style>
+	
 </head>
 <body>
+	<div id="main">
+	<span style="font-size:30px;cursor:pointer; color: orange;" onclick="openNav()">☰ open</span>
 	<h1 style="position: relative;text-align: center;">Dota 2 Builds</h1>
-	<hr style="border-color: red;">
+	<hr class="hr">
 	<h2 style="position: relative;text-align: left;">Shadow Fiend</h2>
-</body>
+	<hr class="hr">
+	<span style="font-size: 20px">Говорят, что у Shadow Fiend душа поэта, но на самом деле у него их тысячи. Всю свою жизнь он поглощал души воров, императоров, священников, воинов, ученых, крестьян и (по роду занятий) героев. Никто не знает, что он с ними делает. Ибо никто никогда не осмеливался проникнуть вглубь Бездны, где Невермор живет, затаившись, как змея среди астральных скал. Поглощает ли он их одну за другой? Выставляет ли он их как трофеи в коридорах зловещих замков, или консервирует их, как еду? А может, он — всего лишь пешка, управляемая каким-то зловещим разумом меж пространствами? Таково его зло, настолько силен его темный дух, что обычным умом его не понять. А если вам всё же очень хочется разузнать, что он с ними делает, то всё просто: вливайтесь в коллекцию. Так или иначе, Невермор уже идет к вам.</span>	
+	<hr class="hr">
+	<h2 style="position: relative;">Способности/Abulities</h2>
+
+
+	<hr class="hr">
+	<h2 style="position: relative;text-align: center;">Shadowraze (близко)</h2>	
+	<img class="skillicon" src="coil1.png" align="left" alt="img">
+	<span>Герой опустошает участок земли прямо перед собой, нанося урон всем врагам в зоне действия. Накладывает на жертву складывающийся эффект, увеличивающий урон от этой способности с каждым её попаданием.
+</span>
+	<br><br><br><br>
+	<img src="mana.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px; float: left; width: 50%">Расход маны: 100/110/120/130</div>
+	<img src="cooldown.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px">Перезарядка: 18/16/14/12</div>
+	<br><br>
+	<p style="line-height: 0.2em;"><b>Способность: </b>ненаправленная</p>
+	<p style="line-height: 0.2em;"><b>Действует на: </b>врагов</p>
+	<p style="line-height: 0.2em;"><b>Тип урона: </b>магический</p>
+	<br>
+	<p><b>Радиус: </b>350</p>
+	<p><b>Урон: </b>120/180/240/300</p>
+	<p style="line-height: 0.2em;"><b>Длительность оглушения:  </b>2/2,2/2,4/2,6 (Талант: 3/3,2/3,4/3,6)</p>
+	<span class="undertext">Когда кентавр бьет своим могучим копытом по земле, за далекие километры с домов сыпется пыль.</span>
+
+
+
+	<hr class="hr">
+	<h2 style="position: relative;text-align: center;">Shadowraze (средне)</h2>	
+	<img class="skillicon" src="coil2.png" align="left" alt="img">
+	<span>Герой опустошает участок земли недалеко от себя, нанося урон всем врагам в зоне действия. Накладывает на жертву складывающийся эффект, увеличивающий урон от этой способности с каждым её попаданием.</span>
+	<br><br>
+	<img src="cooldown.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px">Перезарядка: 4</div>
+	<br><br><br><br>
+	<p style="line-height: 0.2em;"><b>Способность: </b>направленная на юнита</p>
+	<p style="line-height: 0.2em;"><b>Действует на: </b>врагов/себя</p>
+	<p style="line-height: 0.2em;"><b>Тип урона: </b>магический</p>
+	<br>
+	<p style="line-height: 0.2em;"><b>Дальность применения: </b>150</p>
+	<p style="line-height: 0.2em;"><b>Радиус урона:  </b>220</p>
+	<p style="line-height: 0.2em;"><b>Базовый урон: </b>120/180/240/300</p>
+	<p><b>Дополнительный урон от силы: </b>60/80/100/120% (<b>Талант: </b>100/120/140/160%)</p>
+	
+	<span class="undertext">Иногда Брэдводен сражается так свирепо, что в пылу битвы может задеть даже самого себя.</span>
+	<hr class="hr">
+
+
+	<h2 style="position: relative;text-align: center;">Shadowraze (далеко)</h2>	
+	<img class="skillicon" src="coil3.png" align="left" alt="img">
+	<span>Герой опустошает участок земли на значительном расстоянии от себя, нанося урон всем врагам в зоне действия. Накладывает на жертву складывающийся эффект, увеличивающий урон от этой способности с каждым её попаданием.</span>
+	<br><br><br><br><br><br><br>
+	<p><b>Способность: </b>пассивная/аура (с талантом)</p>
+	<p style="line-height: 0.2em;"><b>Действует на: </b>врагов</p>	
+	<br>	
+	<p style="line-height: 0.2em;"><b>Тип урона: </b>физический</p>
+	<p><b>урон: </b>15/25/35/45 (<b>Талант: </b>60/70/80/90)</p>
+	<p style="line-height: 0.2em;"><b>Силы в виде урона: </b>20/26/32/38%</p>
+	<p style="line-height: 0.2em;"><b>Процент урона по строениям: </b> 50%</p>
+	<p><b>Радиус ауры: </b>0 (<b>Талант: </b> 1200)</p>
+	<p style="line-height: 0.2em;"><b>Длительность задержки ауры: </b> 0,5</p>
+	<span class="undertext">Брэдводену даже не нужно парировать атаки противника — его кожа, больше похожая на броню, сама отвечает на любое нападение</span>
+	<hr class="hr">
+
+
+
+	<h2 style="position: relative;text-align: center;">Hitch a Ride</h2>	
+	<img class="skillicon" src="hitch.png" align="left" alt="img">
+	<span>Герой забрасывает союзника в тележку за собой и получает эффект способности Stampede. Союзник в тележке может применять заклинания и атаковать, но не может передвигаться сам по себе, а враги не могут выбрать его целью. Эффекты без цели действуют на союзника в тележке. Увеличивает дальность атаки героев ближнего боя на 200.</span>
+	<br><br><br>
+	<img src="mana.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px; float: left; width: 50%">Расход маны: 75</div>
+	<img src="cooldown.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px">Перезарядка: 30</div>
+	<br><br>
+	<p style="line-height: 0.2em;"><b>Способность: </b>направленная на юнита</p>
+	<p style="line-height: 0.2em;"><b>Действует на: </b>союзников</p>	
+	<br>	
+	<p style="line-height: 0.2em;"><b>Длительность: </b>8</p>
+	<p style="line-height: 0.2em;"><b>Дальность применения:  </b>300</p>
+	<p style="line-height: 0.2em;"><b>Бонус к дальности атаки в ближнем бою: </b>200</p>
+	<span class="undertext">Для Брэдводена желание сохранить свою пространную гордость не идёт ни в какое сравнение с жаждой победы.</span>
+	<hr class="hr">
+
+
+	<h2 style="position: relative;text-align: center;">Stampede</h2>	
+	<img class="skillicon" src="stampede.png" align="left" alt="img">
+	<span>Герой ведёт союзников в яростное наступление. Они проходят сквозь существ на максимальной скорости и втаптывают в землю всех врагов на пути, замедляя их и нанося им урон, зависящий от силы владельца способности. Каждого врага можно втоптать в землю лишь один раз.</span>
+	<br><br>
+	<img src="mana.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px; float: left; width: 50%">Расход маны: 150/200/250</div>
+	<img src="cooldown.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px">Перезарядка:  100 (Талант: 75)</div>
+	<br><br><br><br>
+	<p style="line-height: 0.2em;"><b>Способность: </b>ненаправленная</p>
+	<p style="line-height: 0.2em;"><b>Действует на: </b> союзников/врагов</p>
+	<p style="line-height: 0.2em;"><b>Тип урона: </b>магический</p>
+	<br>
+	<p style="line-height: 0.2em;"><b>Радиус урона/замедления:</b>105</p>
+	<p style="line-height: 0.2em;"><b>Множитель урона за силу:: </b>200%/250%/300%</p>
+	<p style="line-height: 0.2em;"><b>Скорость ускорения: </b>550</p>
+	<p style="line-height: 0.2em;"><b>Замедление скорости передвижения: </b>100%</p>
+	<p style="line-height: 0.2em;"><b>Длительность замедления: </b> 3</p>
+	<p style="line-height: 0.2em;"><b>Длительность: </b> 3,5/4/4,5</p>
+	<br>
+	<span class="undertext">Великий пояс Омекса, означающий величайшего воина своего вида, побуждает товарищей Брэдводена следовать за ним в самые жестокие схватки.</span>
+	<hr class="hr">
+	<h2 style="position: relative;text-align: left;">Сборка/Builds</h2>
+
+
+	<h3>Starting items:</h3>
+	<a class="item" href="https://dota2.ru/items/tango/" title="" alt="Tango"><img src="item/tango.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/observer-ward/" title="" alt="Observer Ward"><img src="item/ward_observer.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/enchanted-mango/" title="" alt="Enchanted Mango"><img src="item/mango.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/iron-branch/" title="" alt="Iron Branch"><img src="item/branches.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/iron-branch/" title="" alt="Iron Branch"><img src="item/branches.png" alt=""></a>
+
+
+	<h3>Early game:</h3>
+	<a class="item" href="https://dota2.ru/items/tranquil-boots/" title="" alt="Tranquil Boots"><img src="item/tranquil_boots.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/magic-wand/" title="" alt="Magic Wand"><img src="item/magic_wand.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/urn-of-shadows/" title="" alt="Urn of Shadows"><img src="item/urn_of_shadows.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/vladmirs-offering/" title="" alt="Vladmir's Offering"><img src="item/vladmir.png" alt=""></a>
+	
+
+	<h3>Items situacionais:</h3>
+	<a class="item" href="https://dota2.ru/items/blink-dagger/" title="" alt="Blink Dagger"><img src="item/blink.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/euls-scepter-of-divinity/" title="" alt="Eul's Scepter of Divinity"><img src="item/eyl.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/pipe-of-insight/" title="" alt="Pipe of Insight"><img src="item/pipe.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/glimmer-cape/" title="" alt="Glimmer Cape"><img src="item/glimmer_cape.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/lotus-orb/" title="" alt="Lotus Orb"><img src="item/lotus_orb.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/drum-of-endurance/" title="" alt="Drum of Endurance"><img src="item/ancient_janggo.png" alt=""></a>
+
+
+	<h3>Support:</h3>
+	<a class="item" href="https://dota2.ru/items/observer-ward/" title="" alt="Observer Ward"><img src="item/ward_observer.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/sentry-ward/" title="" alt="Sentry Ward"><img src="item/ward_sentry.png" alt=""></a>
+
+	<a class="item" href="https://dota2.ru/items/smoke-of-deceit/" title="" alt="Smoke of Deceit"><img src="item/smoke_of_deceit.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/dust-of-appearance/" title="" alt="Dust of Appearance"><img src="item/dust.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/gem-of-true-sight/" title="" alt="Gem of True Sight"><img src="item/gem.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/tome-of-knowledge/" title="" alt="Tome of Knowledge"><img src="item/tome.png" alt=""></a>
+
+	<h3>Luxury:</h3>
+	<a class="item" href="https://dota2.ru/items/scythe-of-vyse/" title="" alt="Scythe of Vyse"><img src="item/hex.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/shivas-guard/" title="" alt="Shiva's Guard"><img src="item/shivas_guard.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/aghanims-scepter/" title="" alt="Aghanim's Scepter"><img src="item/ultimate_scepter.png" alt=""></a>
+	<br>
+	<a style="font-size: 25px; text-decoration: none; color: lightblue;align: right;" href="https://steamcommunity.com/sharedfiles/filedetails/?id=1763670749">
+	ЭТА СБОРКА В STEAM</a>
+	<hr class="hr">
+	<a href="https://dota2.ru">  <img src="int.png" align="right"></a>
+	<br>
+	<br>
+	<a href="https://ci.nsu.ru">  <img src="vki.png" align="left"></a>
+	</div>
+<div id="mySidenav" class="sidenav">
+  		<a style="color: orange;" href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  		<a href="https://dg-star.github.io">Main Menu</a>
+  		<a href="https://dota2.ru">Dota 2.ru</a>
+  		<a href="https://ci.nsu.ru">VKI NSU</a>
+  		<a href="#">Support us</a>
+  		<a href="https://dg-star.github.io/contact/contact.html">Contact</a>
+	</div>
+</div>
+
+	
+
+<script>
+	function openNav() {
+    	document.getElementById("mySidenav").style.width = "250px";
+    	document.getElementById("main").style.marginLeft = "250px";
+    	document.body.style.backgroundColor = "rgba(0,0,0,0.5)";
+	}
+
+	function closeNav() {
+    	document.getElementById("mySidenav").style.width = "0";
+    	document.getElementById("main").style.marginLeft= "0";
+    	document.body.style.backgroundColor = "white";
+	}
+</script>
+</body>		
 </html>
