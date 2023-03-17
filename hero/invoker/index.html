@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Invoker Builds</title>
@@ -23,12 +24,245 @@
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="icon/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
+<style>
+body,html{ height: 100%; color: pink; font-family: Arial;margin: 0;}
+@media (min-width: 0px) {body {background: url(bgmobile.png);}}
+
+@media (min-width: 576px) {body {background: url(bgsm.png);}}
+
+@media (min-width: 768px) {body {background: url(bgmd.png);}}
+
+@media (min-width: 992px) {body {background: url(bglg.png);}}
+
+@media (min-width: 1200px) {body{background: url(bg.png);}}
+
+body{background-size: cover;background-position: center center;background-attachment: fixed;}
+
+.item {text-align: center;display: inline-block;overflow: hidden;position: relative;text-decoration: none;}
+
+.item:before {display: block;background-color: rgb(0, 0, 0);content: "";height: 100%;opacity: 0;position: absolute;width: 100%;z-index: 2;}
+
+.item:after {font-family: 'Lucida Console';color: white;content: attr(alt);display: block;font-size: 16px;opacity: 0;padding: 0 3%;position: absolute;text-transform: none;top: 50%;-webkit-transform-origin: 50% 0%;transform-origin: 50% 0%;-webkit-transform: scale(0) translateY(-50%);transform: scale(0) translateY(-50%);width: 94%;z-index: 3;}
+
+.item img {border: none;display: block;z-index: 1; border-radius: 10px;}
+
+.item:after {-webkit-transition: all 350ms ease-in-out;transition: all 350ms ease-in-out;}
+
+.item:hover:before {opacity: 0.6;}
+
+.item:hover:after {opacity: 1;-webkit-transform: scale(1) translateY(-50%);transform: scale(1) translateY(-60%);}
 
 
+
+.hr{
+	border-color: pink;
+}
+
+.skillicon{
+	border-radius: 10px;
+}
+::-webkit-scrollbar{
+	width: 0;
+}
+
+.undertext{
+	font-size: 15px;
+	font-family: Arial;
+	color: gray;
+	opacity: 0.8;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    widht: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+</style>
+	
 </head>
 <body>
+	<div id="main">
+	<span style="font-size:30px;cursor:pointer; color: pink;" onclick="openNav()">☰ open</span>
 	<h1 style="position: relative;text-align: center;">Dota 2 Builds</h1>
-	<hr style="border-color: red;">
+	<hr class="hr">
 	<h2 style="position: relative;text-align: left;">Invoker</h2>
-</body>
+	<hr class="hr">
+	<span style="font-size: 20px">Магия в своей самой ранней, даже можно сказать, самой мощной форме, всегда являлась в основном искусством памяти. Она не требовала техник, палочек или других принадлежностей, за исключением разума самого чародея. Всё, что ему было нужно — мнемонические средства, помогающие колдующему вспомнить в полных деталях ту психологическую формулу, что раскроет магическую силу. Величайшие волшебники тех дней были одарены отличной памятью, а сами заклинания были настолько сложны и громоздки, что чародеи были вынуждены на чем-то специализироваться. Однако даже самые отличные волшебники могли надеяться лишь на то, что они они запомнят за всю свою жизнь три-четыре заклинания, не более. Обычные маги знали всего два заклинания, так что это не такое уж и необычное явление, когда деревенский чародей знал только одно заклинание, да и то требовало титанических усилий, куч подсказок и инструкций, работающих, как лекарство от забывчивости, в те редкие случаи, когда это самое заклинание просили продемонстрировать. Но среди всех этих волшебников было всего одно, но гениальное и владеющее огромной памятью исключение, и имя ему — Invoker. Уже в своей юности взрослый не по годам волшебник сумел набить руку на использовании не четырех, не пяти, и даже не семи, а не менее десятка заклинаний, которые он сотворял практически мгновенно! Еще больше он уже и так знал, но просто считал бесполезными. Одно из его заклинаний — Sempiternal Cantrap — было такой огромной мощи, что следы от его использования в первые дни создания мира видны до сих пор (или просто расщеплены на атомы). Большинство почти-бессмертных живут тихо, пряча от мира свой секрет, но Invoker — отнюдь не тот, кто хранит свой дар в кладовке. Он — древний, знающий гораздо больше остальных, разум которого все еще имеет свободное место для рассуждений о смысле существования… как и для колдовства, которым он развлекает себя, наблюдая за последними днями этого мира.</span>	
+	<hr class="hr">
+	<h2 style="position: relative;">Способности/Abulities</h2>
+	
+	<hr class="hr">
+	<h2 style="position: relative;text-align: center;">Quas</h2>	
+	<img class="skillicon" src="Quas.png" align="left" alt="img">
+	<span>Позволяет управлять стихией льда и даёт +2 к силе за уровень. Каждая активная сфера Quas увеличивает восстановление здоровья.</span>
+	<br><br>
+	<br><br><br><br><br>
+	<p style="line-height: 0.2em;"><b>Способность: </b>ненаправленная</p>
+	<p style="line-height: 0.2em;"><b>Действует на: </b>себя</p><br>
+	<p style="line-height: 0.2em;"><b>Дает сфер Quas при использовании: </b>1</p>
+	<p style="line-height: 0.2em;"><b>Бонус к силе: </b>2/4/6/8/10/12/14</p>
+	<p style="line-height: 0.2em;"><b>Бонус эффектов за сферу: </b>0 (<b>Талант:</b> 3)</p>
+	<hr class="hr">
+
+
+	<h2 style="position: relative;text-align: center;">Wex</h2>	
+	<img class="skillicon" src="Wex.png" align="left" alt="img">
+	<span>Позволяет управлять стихией молнии и даёт +2 к ловкости за уровень. Каждая активная сфера Wex увеличивает скорость атаки и передвижения.</span>
+	<br><br>
+	<br><br><br><br><br>
+	<p style="line-height: 0.2em;"><b>Способность: </b>ненаправленная</p>
+	<p style="line-height: 0.2em;"><b>Действует на: </b>себя</p><br>
+	<p style="line-height: 0.2em;"><b>Дает сфер Wex при использовании: </b>1</p>
+	<p style="line-height: 0.2em;"><b>Бонус к скорости передвижения за сферу: </b>0,8/1,6/2,4/3,2/4/4,8/5,6%</p>
+	<p style="line-height: 0.2em;"><b>Бонус к ловкости: </b>2/4/6/8/10/12/14</p>
+	<p style="line-height: 0.2em;"><b>Бонус эффектов за сферу: </b>0 (<b>Талант:</b> 3)</p>
+	<hr class="hr">
+
+
+
+	<h2 style="position: relative;text-align: center;">Exort</h2>	
+	<img class="skillicon" src="Exort.png" align="left" alt="img">
+	<span>Позволяет управлять стихией огня и даёт +2 к интеллекту за уровень. Каждая активная сфера Exort увеличивает урон от атак.</span>
+	<br><br>
+	<br><br><br><br><br>
+	<p style="line-height: 0.2em;"><b>Способность: </b>ненаправленная</p>
+	<p style="line-height: 0.2em;"><b>Действует на: </b>себя</p><br>
+	<p style="line-height: 0.2em;"><b>Дает сфер Exort при использовании: </b>1</p>
+	<p style="line-height: 0.2em;"><b>Бонус к урону за сферу: </b>2/4/6/8/10/12/14</p>
+	<p style="line-height: 0.2em;"><b>Бонус к интеллекту: </b>2/4/6/8/10/12/14</p>
+	<p style="line-height: 0.2em;"><b>Бонус эффектов за сферу: </b>0 (<b>Талант:</b> 3)</p>
+	<hr class="hr">
+
+
+	<h2 style="position: relative;text-align: center;">Invoke</h2>	
+	<img class="skillicon" src="Invoke.png" align="left" alt="img">
+	<span>Герой комбинирует элементы использующихся стихий, чтобы создать новое заклинание. Перезарядка этой способности снижается на 0,3 сек. за каждый уровень сфер.</span>
+	<br><br>
+	<img src="cooldown.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px">Перезарядка:  7</div>
+	<br><br><br>
+	
+	<p style="line-height: 0.2em;"><b>Способность: </b>ненаправленная</p>
+	<p style="line-height: 0.2em;"><b>Действует на: </b>себя</p><br>
+	<p style="line-height: 0.2em;"><b>Макс. заклинаний: </b>2</p>
+	<p style="line-height: 0.2em;"><b>Уменьшение перезарядки за уровень сферы: </b>0,3</p>
+	<p style="line-height: 0.2em;"><b>Бонус к интеллекту: </b>2/4/6/8/10/12/14</p>
+	<p style="line-height: 0.2em;"><b>Бонус эффектов за сферу: </b>0 (<b>Талант:</b> 3)</p>
+	<hr class="hr">
+
+
+	<h2 style="position: relative;text-align: center;">Cold Snap</h2>	
+	<img class="skillicon" src="Cold Shap.png" align="left" alt="img">
+	<span>Вытягивает тепло из врага на время, зависящее от уровня Quas. Враг получит урон и будет ненадолго заморожен. Последующий урон, полученный в этом состоянии, вновь заморозит врага и нанесёт ему дополнительный урон. Минимальный интервал между заморозками зависит от уровня Quas.</span>
+	<br><br>
+	<img src="mana.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px; float: left; width: 50%">Расход маны: 100</div>
+	<img src="cooldown.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px">Перезарядка:  20 (Талант: 12)</b></div>
+	<br><br><br>
+	
+	<p style="line-height: 0.2em;"><b>Способность: </b>направленная на юнита</p>
+	<p style="line-height: 0.2em;"><b>Действует на: </b>врагов</p>
+	<p style="line-height: 0.2em;"><b>Тип урона: </b>магический</p><br>
+	<p style="line-height: 0.2em;"><b>Дальность применения: </b>1000</p>
+	<p style="line-height: 0.2em;"><b>Урон за срабатывание заморозки (Quas):: </b>8/16/24/32/40/48/56</p>
+	<p style="line-height: 0.2em;"><b>Перезарядка заморозки (Quas): </b>0,83/0,80/0,77/0,74/0,71/0,68/0,65</p>
+	<p style="line-height: 0.2em;"><b>Длительность эффекта (Quas): </b>3/3,5/4/4,5/5/5,5/6</p>
+	<span class="undertext">Длительная дрожь Садрона.</span>
+	<hr class="hr">
+
+
+
+
+	<h2 style="position: relative;text-align: left;">Сборка/Builds</h2>
+	<h3>Starting items:</h3>
+	<a class="item" href="https://dota2.ru/items/tango/" title="" alt="Tango"><img src="item/tango.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/tango/" title="" alt="Tango"><img src="item/tango.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/quelling-blade/" title="" alt="Quelling Blade"><img src="item/blade.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/enchanted-mango/" title="" alt="Enchanted Mango"><img src="item/mango.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/enchanted-mango/" title="" alt="Enchanted Mango"><img src="item/mango.png" alt=""></a>
+
+
+	<h3>Early game:</h3>
+	<a class="item" href="https://dota2.ru/items/phase-boots/" title="" alt="Phase Boots"><img src="item/phase.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/vanguard/" title="" alt="Vanguard"><img src="item/vg.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/blade-mail/" title="" alt="Blade Mail"><img src="item/blade_mail.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/aghanims-shard/" title="" alt="Aghanim's Shard"><img src="item/shard.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/eternal-shroud/" title="" alt="Eternal Shroud"><img src="item/eternal_shroud.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/aghanims-scepter/" title="" alt="Aghanim's Scepter"><img src="item/ultimate_scepter.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/heart-of-tarrasque/" title="" alt="Heart of Tarrasque"><img src="item/heart.png" alt=""></a>
+	<br>
+	<a style="font-size: 25px; text-decoration: none; color: lightblue; text-align: left" href="https://www.youtube.com/@greyshark_official" >YOUTUBE:GREYSHARK</a><br>
+	<a style="font-size: 25px; text-decoration: none; color: lightblue;align: right;" href="https://www.dota2.com/workshop/builds/view?embedded=workshop&publishedfileid=209135338&target_uri=https://steamcommunity.com&l=russian&u=public">
+	ЭТА СБОРКА В STEAM</a>
+	<hr class="hr">
+	<a href="https://dota2.ru">  <img src="int.png" align="right"></a>
+	<br>
+	<br>
+	<a href="https://ci.nsu.ru">  <img src="vki.png" align="left"></a>
+	</div>
+<div id="mySidenav" class="sidenav">
+  		<a style="color: pink;" href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  		<a href="https://dg-star.github.io">Main Menu</a>
+  		<a href="https://dota2.ru">Dota 2.ru</a>
+  		<a href="https://ci.nsu.ru">VKI NSU</a>
+  		<a href="#">Support us</a>
+  		<a href="https://dg-star.github.io/contact/contact.html">Contact</a>
+	</div>
+	
+</div>
+
+<script>
+	function openNav() {
+    	document.getElementById("mySidenav").style.width = "250px";
+    	document.getElementById("main").style.marginLeft = "250px";
+    	document.body.style.backgroundColor = "rgba(0,0,0,0.5)";
+	}
+
+	function closeNav() {
+    	document.getElementById("mySidenav").style.width = "0";
+    	document.getElementById("main").style.marginLeft= "0";
+    	document.body.style.backgroundColor = "white";
+	}
+</script>
+</body>		
 </html>
