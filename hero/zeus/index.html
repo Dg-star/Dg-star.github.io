@@ -25,7 +25,7 @@
 	<meta name="msapplication-TileImage" content="icon/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
 <style>
-body,html{ height: 100%; color: red; font-family: Arial;margin: 0;}
+body,html{ height: 100%; color: azure; font-family: Arial;margin: 0;}
 @media (min-width: 0px) {body {background: url(bgmobile.png);}}
 
 @media (min-width: 576px) {body {background: url(bgsm.png);}}
@@ -183,7 +183,7 @@ body{background-size: cover;background-position: center center;background-attach
 	<span>Герой совершает божественный прыжок, во время которого он ударит током ближайшего видимого врага (в первую очередь героев), нанеся ему урон и замедлив его передвижение, атаку и применение заклинаний. Если герой передвигался, он прыгнет вперёд. Способность на 3 секунды даёт беспрепятственный обзор в радиусе 900 вокруг владельца.</span>
 	<br><br>
 	<img src="mana.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px; float: left; width: 50%">Расход маны: 50/60/70/80</div>
-	<img src="cooldown.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px">Перезарядка: 26/22/18/14 (Талант: 22/18/14/10)</div>
+	<img src="cooldown.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px">Перезарядка: 26/22/18/14 </div>
 	<br><br><br>
 	<p style="line-height: 0.2em;"><b>Способность: </b>ненаправленная</p>
 	<p style="line-height: 0.2em;"><b>Действует на: </b>врагов/себя</p>
@@ -214,47 +214,51 @@ body{background-size: cover;background-position: center center;background-attach
 	<br>
 	<p style="line-height: 0.2em;"><b>Дальность применения: </b>глобальная </p>
 	<p style="line-height: 0.2em;"><b>Радиус облака: </b>450</p>
-	<p><b>Атак героев с ближней атакой для разрушения: </b>4 </p>
-	<p><b>Атак героев с дальней атакой для разрушения: </b>8 </p>
-	<p><b>Атак не-героев для разрушения: </b>16</p>
-	<p><b>Интервал выстрелов Lightning Bolt: </b>2,5</p>
-	<p><b>Длительность: </b> 30 </p>
+	<p style="line-height: 0.2em;"><b>Атак героев с ближней атакой для разрушения: </b>4 </p>
+	<p style="line-height: 0.2em;"><b>Атак героев с дальней атакой для разрушения: </b>8 </p>
+	<p style="line-height: 0.2em;"><b>Атак не-героев для разрушения: </b>16</p>
+	<p style="line-height: 0.2em;"><b>Интервал выстрелов Lightning Bolt: </b>2,5</p>
+	<p style="line-height: 0.2em;"><b>Длительность: </b> 30 </p>
 	<span class="undertext">Где гневается бог грома, вскоре собираются тучи.</span>
 	
 
 
 	<hr class="hr">
-	<h2 style="position: relative;text-align: center;">Curse of Avernus</h2>	
-	<img class="skillicon" src="curse.png" align="left" alt="img">
-	<span>Атаки героя замедляют передвижение жертвы. Если атаковать врага 4 раза, на него сработает замораживающее проклятие: оно накладывает безмолвие и замедление, а все атакующие этого врага существа получают дополнительную скорость атаки.</span>
+	<h2 style="position: relative;text-align: center;">Static Field</h2>	
+	<img class="skillicon" src="field.png" align="left" alt="img">
+	<span>Все враги, которых герой атакует и на которых действуют его способности, получают дополнительный урон в размере 9% от своего текущего здоровья.</span>
 	<br><br><br><br><br><br>
 	<p style="line-height: 0.2em;"><b>Способность: </b>Пассивная</p>
-	<p style="line-height: 0.2em;"><b>Действует на: </b>союзников/врагов</p>
+	<p style="line-height: 0.2em;"><b>Действует на: </b>врагов</p>
+	<p style="line-height: 0.2em;"><b>Тип урона: </b>магический</p>
 	<br>
-	<p><b>Ударов нужно: </b>4 (<b>Талант:  </b>3)</p></p>
-	<p><b>Базовое замедление скорости передвижения: </b>10%/15%/20%/25%</p>
-	<br>
-	<p><b>Замедление скорости передвижения: </b>15%/30%/45%/60% (<b>Талант:  </b>30%/45%/60%/75%)</p></p>
-	<p style="line-height: 0.2em;"><b>Доп. скорость атаки: </b>40/60/80/100</p>
-	<p style="line-height: 0.2em;"><b>Базовая длительность: </b>5</p>
-	<p style="line-height: 0.2em;"><b>Длительность проклятья: </b>4,5</p>
-	<p style="line-height: 0.2em;"><b>Длительность ускорения: </b>4</p>
-	<span class="undertext">Крещёные в купели черпают из неё силы, но остальных дары Аверно смертельно изнуряют.</span>
+	<p style="line-height: 0.2em;"><b>Урон от текущего здоровья:  </b>8%</p>
+	<p ><b>Для активации способности требуется Aghanim's Shard </b></p>
+	<span class="undertext">Когда владыка грома ступает по земле, даже воздух вокруг него искрится от напряжения.</span>
 	
 
 	<hr class="hr">
-	<h2 style="position: relative;text-align: center;">Borrowed Time</h2>	
-	<img class="skillicon" src="time.png" align="left" alt="img">
-	<span>Обращает весь получаемый урон в лечение. Применение снимает большинство отрицательных эффектов. Если способность готова, то она сработает автоматически, как только здоровье владельца упадёт ниже 400.</span>
+	<h2 style="position: relative;text-align: center;">Thundergod's Wrath</h2>	
+	<img class="skillicon" src="wrath.png" align="left" alt="img">
+	<span>Поражает всех вражеских героев молнией вне зависимости от их местоположения. Способность также раскрывает невидимость вражеских существ вокруг каждого ударенного противника. Если герой врага невидим, то он не получит урона, но невидимость всё равно раскроется.</span>
 	<br><br>
-	<img src="cooldown.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px">Перезарядка:  60/50/40 (Талант: 52/42/32)</div>
+	<img src="mana.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px;float: left; width: 50%"> Расход маны:  300/400/500</div>
+	<img src="cooldown.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px">Перезарядка: 130/125/120</div>
 	<br><br><br>
-	<p><b>Способность: </b>ненаправленная/аура (с Aghanim's Scepter)</p>
-	<p style="line-height: 0.2em;"><b>Действует на: </b>себя/союзников (с Aghanim's Scepter)</p>
+	<p><b>Способность: </b>ненаправленная</p>
+	<p style="line-height: 0.2em;"><b>Действует на: </b>вражеских героев</p>
 	<p style="line-height: 0.2em;"><b>Порог здоровья: </b>400</p>
-	<p style="line-height: 0.2em;"><b>Длительность: </b>4/5/6</p>
-	<br>
-	<span class="undertext">Эта сила, самая противоестественная из всех даров купели Аверно, бросает вызов пониманию смертных. Что должно ранить — лечит, а что должно убить — дает свежие силы.</span>
+	<p style="line-height: 0.2em;"><b>Тип урона: </b> магический</p>
+	<br><br>
+	<p style="line-height: 0.2em;"><b>Радиус действия: </b> глобальная</p>
+	<p style="line-height: 0.2em;"><b>Радиус обзора: </b> 500</p>
+	<p style="line-height: 0.2em;"><b>Радиус True Sight: </b> 900</p>
+	<p style="line-height: 0.2em;"><b>Урон: </b> 300/425/550 (Талант: 400/525/650)</p>
+	<p style="line-height: 0.2em;"><b>Длительность обзора и True Sight: </b> 3</p>
+	<p style="line-height: 0.2em;"><b>Длительность задержки ауры True Sight </b> 0,5</p>
+	<span class="undertext">Повелитель небес сокрушает всех, кто противостоит ему, независимо от того, близко или далеко они находятся.</span>
+
+
 	<hr class="hr">
 	<h2 style="position: relative;text-align: left;">Сборка/Builds</h2>
 	<h3>Начальный закуп:</h3>
