@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Axe Builds</title>
+	<title>Zeus Builds</title>
 
 
 	<link rel="apple-touch-icon" sizes="57x57" href="icon/apple-icon-57x57.png">
@@ -23,12 +24,312 @@
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="icon/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
+<style>
+body,html{ height: 100%; color: blue; font-family: Arial;margin: 0;}
+@media (min-width: 0px) {body {background: url(bgmobile.png);}}
+
+@media (min-width: 576px) {body {background: url(bgsm.png);}}
+
+@media (min-width: 768px) {body {background: url(bgmd.png);}}
+
+@media (min-width: 992px) {body {background: url(bglg.png);}}
+
+@media (min-width: 1200px) {body{background: url(bg.png);}}
+
+body{background-size: cover;background-position: center center;background-attachment: fixed;}
+
+.item {text-align: center;display: inline-block;overflow: hidden;position: relative;text-decoration: none;}
+
+.item:before {display: block;background-color: rgb(0, 0, 0);content: "";height: 100%;opacity: 0;position: absolute;width: 100%;z-index: 2;}
+
+.item:after {font-family: 'Lucida Console';color: white;content: attr(alt);display: block;font-size: 16px;opacity: 0;padding: 0 3%;position: absolute;text-transform: none;top: 50%;-webkit-transform-origin: 50% 0%;transform-origin: 50% 0%;-webkit-transform: scale(0) translateY(-50%);transform: scale(0) translateY(-50%);width: 94%;z-index: 3;}
+
+.item img {border: none;display: block;z-index: 1;}
+
+.item:after {-webkit-transition: all 350ms ease-in-out;transition: all 350ms ease-in-out;}
+
+.item:hover:before {opacity: 0.6;}
+
+.item:hover:after {opacity: 1;-webkit-transform: scale(1) translateY(-50%);transform: scale(1) translateY(-60%);}
 
 
+.hr{
+	border-color: blue;
+}
+
+.skillicon{
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar{
+	width: 0;
+}
+
+.undertext{
+	font-size: 15px;
+	font-family: Arial;
+	color: gray;
+	opacity: 0.8;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    widht: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+</style>
+	
 </head>
 <body>
+	<div id="main">
+	<span style="font-size:30px;cursor:pointer; color: lightblue;" onclick="openNav()">☰ open</span>	
 	<h1 style="position: relative;text-align: center;">Dota 2 Builds</h1>
-	<hr style="border-color: red;">
-	<h2 style="position: relative;text-align: left;">Axe</h2>
-</body>
+	<hr class="hr">
+	<h2 style="position: relative;text-align: left;">Zeus</h2>
+	<hr class="hr">
+	<span style="font-size: 20px">Повелитель небес и отец богов видит во всех героях своих буйных, мятежных детей. Неисчислимы свидания со смертными женщинами, где заставала его супруга. Поставила богиня бессмертного перед выбором: «Если нравятся смертные, иди и сам стань среди них. Докажи свою верность, и приму тебя своим мужем бессмертным. Если же нет — иди и умри средь созданий своих». Согласился с ней бог: неоспоримы были её слова (да и магия тоже). С тех пор он вёл себя примерно, проявляя к бессмертию чуть больше любви, чем к смертным. Но чтобы умолить вечную свою супругу, он должен стремиться к победам на поле боя.</span>	
+	<hr class="hr">
+	<h2 style="position: relative;">Способности/Abulities</h2>
+	<hr class="hr">
+	<h2 style="position: relative;text-align: center;">Arc Lightning</h2>	
+	<img class="skillicon" src="arc.png" align="left" alt="img">
+	<span>Выпускает молнию, которая перескакивает с одного врага на другого..</span>
+	<br><br>
+	<img src="mana.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px; float: left; width: 50%">Расход маны: 80/85/90/95</div>
+	<img src="cooldown.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px">Перезарядка: 1,6</div>
+	<br><br><br>
+	<p style="line-height: 0.2em;"><b>Способность: </b>направленная на юнита</p>
+	<p style="line-height: 0.2em;"><b>Действует на: </b>врагов</p>
+	<p><b>Тип урона: </b>магический</p>
+	<br>
+	<p style="line-height: 0.2em;"><b>Дальность применения: </b>850</p>
+	<p style="line-height: 0.2em;"><b>радиус отскакивания: </b>5/7/9/15</p>
+	<p style="line-height: 0.2em;"><b>количество отскоков: </b>500</p>
+	<p style="line-height: 0.2em;"><b>интервал отскоков: </b>0,25</p>
+	<p style="line-height: 0.2em;"><b>Урон: </b>110/160/210/260 (<b>Талант:  </b>160/210/260/310)</p></p>
+	
+	
+	<span class="undertext">Любимый приём бога грома против жалких смертных.</span>
+
+
+
+	<hr class="hr">
+	<h2 style="position: relative;text-align: center;">Lightning Bolt</h2>	
+	<img class="skillicon" src="bolt.png" align="left" alt="img">
+	<span>Ударом молнии наносит врагу урон и ненадолго его оглушает. В радиусе 750 вокруг цели на время даётся беспрепятственный обзор и раскрывается невидимость. Способность можно применить на землю — тогда она подействует на ближайшего вражеского героя в радиусе 325.</span>
+	<br><br>
+	<img src="mana.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px; float: left; width: 50%">Расход маны: 120/125/130/135</div>
+	<img src="cooldown.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px">Перезарядка: 6</div>
+	<br><br><br>
+	<p style="line-height: 0.2em;"><b>Способность: </b>направленная на точку/направленная на юнита/направленная на область (с талантом)</p>
+	<p style="line-height: 0.2em;"><b>Действует на: </b>врагов</p>
+	<p style="line-height: 0.2em;"><b>Тип урона: </b>магический</p>
+	<br>
+	<p style="line-height: 0.2em;"><b>Дальность применения: </b>700/750/800/850</p>
+	<p style="line-height: 0.2em;"><b>Радиус поиска цели: </b>325</p>
+	<p style="line-height: 0.2em;"><b>Радиус обзора и True Sight: </b>750 </p>
+	<p style="line-height: 0.2em;"><b>Урон: </b>125/200/275/350 </p>
+	<p style="line-height: 0.2em;"><b>Длительность оглушения: </b>0,3 (<b>Талант:  </b>0,7)</p></p>
+	<p style="line-height: 0.2em;"><b>Длительность обзора и True Sight: </b>5 </p>
+	<p style="line-height: 0.2em;"><b>Длительность задержки ауры True Sight: </b>0,5 </p>
+	<span class="undertext">Ошеломляющее наказание для мятежных язычников.</span>
+	
+
+	<hr class="hr">
+	<h2 style="position: relative;text-align: center;">Heavenly Jump</h2>	
+	<img class="skillicon" src="jump.png" align="left" alt="img">
+	<span>Герой совершает божественный прыжок, во время которого он ударит током ближайшего видимого врага (в первую очередь героев), нанеся ему урон и замедлив его передвижение, атаку и применение заклинаний. Если герой передвигался, он прыгнет вперёд. Способность на 3 секунды даёт беспрепятственный обзор в радиусе 900 вокруг владельца.</span>
+	<br><br>
+	<img src="mana.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px; float: left; width: 50%">Расход маны: 50/60/70/80</div>
+	<img src="cooldown.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px">Перезарядка: 26/22/18/14 </div>
+	<br><br><br>
+	<p style="line-height: 0.2em;"><b>Способность: </b>ненаправленная</p>
+	<p style="line-height: 0.2em;"><b>Действует на: </b>врагов/себя</p>
+	<p style="line-height: 0.2em;"><b>Тип урона: </b>магический</p>
+	<br>
+	<p style="line-height: 0.2em;"><b>Радиус поиска: </b>700/800/900/1000</p>
+	<p style="line-height: 0.2em;"><b>Дальность прыжка </b>500</p>
+	<p style="line-height: 0.2em;"><b>Количество целей: </b>1 (Талант: 2) </p>
+	<p style="line-height: 0.2em;"><b>Урон: </b>20/50/75/100 </p>
+	<p style="line-height: 0.2em;"><b>Замедление скорости передвижения: </b>80%</p>
+	<p style="line-height: 0.2em;"><b>Замедление скорости атаки: </b>100 </p>
+	<p style="line-height: 0.2em;"><b>Замедление применения заклинаний:</b> 50% </p>
+	<p style="line-height: 0.2em;"><b>Длительность замедления</b> 1,6 </p>
+	<p style="line-height: 0.2em;"><b>Длительность прыжка:</b> 0,5 </p>
+	<p style="line-height: 0.2em;"><b>Бонусная скорость передвижения после Heavenly Jump:</b> 0 (Талант: 30) </p>
+	
+	<hr class="hr">
+	<h2 style="position: relative;text-align: center;">Nimbus</h2>	
+	<img class="skillicon" src="nimbus.png" align="left" alt="img">
+	<span>Создаёт в любом месте карты грозовое облако, которое автоматически ударяет врагов неподалёку молниями от способности Lightning Bolt.</span>
+	<br><br><br>
+	<img src="mana.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px; float: left; width: 50%">Расход маны: 325</div>
+	<img src="cooldown.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px">Перезарядка: 45</div>
+	<br><br><br>
+	<p style="line-height: 0.2em;"><b>Способность: </b>направленная на область</p>
+	<p style="line-height: 0.2em;"><b>Действует на: </b>врагов</p>
+	<p style="line-height: 0.2em;"><b>Тип урона: </b>магический</p>
+	<br>
+	<p style="line-height: 0.2em;"><b>Дальность применения: </b>глобальная </p>
+	<p style="line-height: 0.2em;"><b>Радиус облака: </b>450</p>
+	<p style="line-height: 0.2em;"><b>Атак героев с ближней атакой для разрушения: </b>4 </p>
+	<p style="line-height: 0.2em;"><b>Атак героев с дальней атакой для разрушения: </b>8 </p>
+	<p style="line-height: 0.2em;"><b>Атак не-героев для разрушения: </b>16</p>
+	<p style="line-height: 0.2em;"><b>Интервал выстрелов Lightning Bolt: </b>2,5</p>
+	<p style="line-height: 0.2em;"><b>Длительность: </b> 30 </p>
+	<span class="undertext">Где гневается бог грома, вскоре собираются тучи.</span>
+	
+
+
+	<hr class="hr">
+	<h2 style="position: relative;text-align: center;">Static Field</h2>	
+	<img class="skillicon" src="field.png" align="left" alt="img">
+	<span>Все враги, которых герой атакует и на которых действуют его способности, получают дополнительный урон в размере 9% от своего текущего здоровья.</span>
+	<br><br><br><br><br><br>
+	<p style="line-height: 0.2em;"><b>Способность: </b>Пассивная</p>
+	<p style="line-height: 0.2em;"><b>Действует на: </b>врагов</p>
+	<p style="line-height: 0.2em;"><b>Тип урона: </b>магический</p>
+	<br>
+	<p style="line-height: 0.2em;"><b>Урон от текущего здоровья:  </b>8%</p>
+	<p ><b>Для активации способности требуется Aghanim's Shard </b></p>
+	<span class="undertext">Когда владыка грома ступает по земле, даже воздух вокруг него искрится от напряжения.</span>
+	
+
+	<hr class="hr">
+	<h2 style="position: relative;text-align: center;">Thundergod's Wrath</h2>	
+	<img class="skillicon" src="wrath.png" align="left" alt="img">
+	<span>Поражает всех вражеских героев молнией вне зависимости от их местоположения. Способность также раскрывает невидимость вражеских существ вокруг каждого ударенного противника. Если герой врага невидим, то он не получит урона, но невидимость всё равно раскроется.</span>
+	<br><br>
+	<img src="mana.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px;float: left; width: 50%"> Расход маны:  300/400/500</div>
+	<img src="cooldown.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px">Перезарядка: 130/125/120</div>
+	<br><br>
+	<p><b>Способность: </b>ненаправленная</p>
+	<p style="line-height: 0.2em;"><b>Действует на: </b>вражеских героев</p>
+	<p style="line-height: 0.2em;"><b>Порог здоровья: </b>400</p>
+	<p style="line-height: 0.2em;"><b>Тип урона: </b> магический</p>
+	<br>
+	<p style="line-height: 0.2em;"><b>Радиус действия: </b> глобальная</p>
+	<p style="line-height: 0.2em;"><b>Радиус обзора: </b> 500</p>
+	<p style="line-height: 0.2em;"><b>Радиус True Sight: </b> 900</p>
+	<p style="line-height: 0.2em;"><b>Урон: </b> 300/425/550 (Талант: 400/525/650)</p>
+	<p style="line-height: 0.2em;"><b>Длительность обзора и True Sight: </b> 3</p>
+	<p style="line-height: 0.2em;"><b>Длительность задержки ауры True Sight </b> 0,5</p>
+	<span class="undertext">Повелитель небес сокрушает всех, кто противостоит ему, независимо от того, близко или далеко они находятся.</span>
+
+
+	<hr class="hr">
+	<h2 style="position: relative;text-align: left;">Сборка/Builds</h2>
+	<h3>Начальный закуп:</h3>
+	<a class="item" href="https://dota2.ru/items/tango/" title="" alt="Tango"><img src="item/tango.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/healing-salve/" alt="Healing Salve"><img src="item/flask.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/enchanted-mango/" title="" alt="mango"><img src="item/mango.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/enchanted-mango/" title="" alt="mango"><img src="item/mango.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/enchanted-mango/" title="" alt="mango"><img src="item/mango.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/enchanted-mango/" title="" alt="mango"><img src="item/mango.png" alt=""></a>
+	<h3>Основные предметы:</h3>
+	<a class="item" href="https://dota2.ru/items/arcane-boots/" title="" alt="Arcane Boots"><img src="item/arcane_boots.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/aether-lens/" title="" alt="Aether Lens"><img src="item/aether_lens.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/aghanims-scepter/" title="" alt="Aghanim's Scepter"><img src="item/aghanims-scepter.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/aghanims-shard/" title="" alt="Aghanim's shard"><img src="item/aghanims-shard.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/refresher-orb/" title="" alt="Refresher Orb"><img src="item/refresher_orb.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/black-king-bar/" title="" alt="black_king_bar"><img src="item/black_king_bar.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/scythe-of-vyse/" title="" alt="Scythe of Vyse"><img src="item/hex.png" alt=""></a>
+	
+	
+	<h3>YOUTUBE:GREYSHARK</h3>
+	<a class="item" href="https://dota2.ru/items/tome-of-knowledge/" title="" alt="Tome of Knowledge"><img src="item/tome.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/tome-of-knowledge/" title="" alt="Tome of Knowledge"><img src="item/tome.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/tome-of-knowledge/" title="" alt="Tome of Knowledge"><img src="item/tome.png" alt=""></a>
+	<br>
+	<a style="font-size: 25px; text-decoration: none; color: lightblue; text-align: left" href="https://www.youtube.com/@greyshark_official" >YOUTUBE:GREYSHARK</a>
+	<br>
+	<a style="font-size: 25px; text-decoration: none; color: lightblue;align: right;" href="https://steamcommunity.com/sharedfiles/filedetails/?id=189539290" >ИСПОЛЬЗОВАТЬ ЭТОТ ИМБА БИЛД</a>
+	<hr class="hr">
+	<a href="https://dota2.ru">  <img src="int.png" align="right"></a>
+	<br>
+	<br>
+	<a href="https://ci.nsu.ru">  <img src="vki.png" align="left"></a>
+	</div>
+	<div id="mySidenav" class="sidenav">
+  		<a style="color: lightblue;" href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  		<a href="https://dg-star.github.io">Main Menu</a>
+  		<a href="https://dota2.ru">Dota 2.ru</a>
+  		<a href="https://ci.nsu.ru">VKI NSU</a>
+  		<a href="#">Support us</a>
+  		<a href="https://dg-star.github.io/contact/contact.html">Contact</a>
+	</div>
+	
+</div>
+
+<script>
+	function openNav() {
+    	document.getElementById("mySidenav").style.width = "250px";
+    	document.getElementById("main").style.marginLeft = "250px";
+    	document.body.style.backgroundColor = "rgba(0,0,0,0.5)";
+	}
+
+	function closeNav() {
+    	document.getElementById("mySidenav").style.width = "0";
+    	document.getElementById("main").style.marginLeft= "0";
+    	document.body.style.backgroundColor = "white";
+	}
+</script>
+</div>
+</body>		
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
