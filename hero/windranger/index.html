@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Axe Builds</title>
+	<title>Windranger Builds</title>
 
 
 	<link rel="apple-touch-icon" sizes="57x57" href="icon/apple-icon-57x57.png">
@@ -23,12 +24,291 @@
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="icon/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
+<style>
+body,html{ height: 100%; color: seagreen; font-family: Arial;margin: 0;}
+@media (min-width: 0px) {body {background: url(bgmobile.png);}}
+
+@media (min-width: 576px) {body {background: url(bgsm.png);}}
+
+@media (min-width: 768px) {body {background: url(bgmd.png);}}
+
+@media (min-width: 992px) {body {background: url(bglg.png);}}
+
+@media (min-width: 1200px) {body{background: url(bg.png);}}
+
+body{background-size: cover;background-position: center center;background-attachment: fixed;}
+
+.item {text-align: center;display: inline-block;overflow: hidden;position: relative;text-decoration: none;}
+
+.item:before {display: block;background-color: rgb(0, 0, 0);content: "";height: 100%;opacity: 0;position: absolute;width: 100%;z-index: 2;}
+
+.item:after {font-family: 'Lucida Console';color: white;content: attr(alt);display: block;font-size: 16px;opacity: 0;padding: 0 3%;position: absolute;text-transform: none;top: 50%;-webkit-transform-origin: 50% 0%;transform-origin: 50% 0%;-webkit-transform: scale(0) translateY(-50%);transform: scale(0) translateY(-50%);width: 94%;z-index: 3;}
+
+.item img {border: none;display: block;z-index: 1;}
+
+.item:after {-webkit-transition: all 350ms ease-in-out;transition: all 350ms ease-in-out;}
+
+.item:hover:before {opacity: 0.6;}
+
+.item:hover:after {opacity: 1;-webkit-transform: scale(1) translateY(-50%);transform: scale(1) translateY(-60%);}
 
 
+.hr{
+	border-color: darkgreen;
+}
+
+.skillicon{
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar{
+	width: 0;
+}
+
+.undertext{
+	font-size: 15px;
+	font-family: Arial;
+	color: gray;
+	opacity: 0.8;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    widht: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+</style>
+	
 </head>
 <body>
+	<div id="main">
+	<span style="font-size:30px;cursor:pointer; color: limegreen;" onclick="openNav()">☰ open</span>	
 	<h1 style="position: relative;text-align: center;">Dota 2 Builds</h1>
-	<hr style="border-color: red;">
-	<h2 style="position: relative;text-align: left;">Axe</h2>
-</body>
+	<hr class="hr">
+	<h2 style="position: relative;text-align: left;">Zeus</h2>
+	<hr class="hr">
+	<span style="font-size: 20px">Западные леса крепко хранят свои секреты. Один из них — Лиралей, непревзойденная лучница лесов, любимица ветра. Семья Лиралей, известной теперь как ветрокрылая Windranger, была убита ночью во время шторма — буря снесла дом до основания, разнеся все вокруг. Только новорожденная выжила среди развалин, пронизанных смертью и разрушением. Когда шторм стих, ветер услышал удачливого младенца, плачущего в траве. Он пожалел ребенка и перенес его по воздуху на порог дома в соседней деревне. В последующие годы ветер неоднократно навещал ее, наблюдая со стороны, как она оттачивает свои навыки. Теперь, после многих лет тренировок, Windranger никогда не промахивается мимо цели. Она двигается с ослепительной скоростью, будто бы подгоняемая ветром. Благодаря шквалу стрел, которым она встречает врагов, она стала почти такой же смертоносной, как сама природа.</span>	
+	<hr class="hr">
+	<h2 style="position: relative;">Способности/Abulities</h2>
+
+
+	<hr class="hr">
+	<h2 style="position: relative;text-align: center;">Shackleshot</h2>	
+	<img class="skillicon" src="shakle.png" align="left" alt="img">
+	<span>Связывает цель с находящимся позади неё врагом или деревом. Если цель не будет с чем-либо связана, длительность оглушения сократится до 0,75 сек.</span>
+	<br><br>
+	<img src="mana.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px; float: left; width: 50%">Расход маны:70/80/90/100</div>
+	<img src="cooldown.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px">Перезарядка: 16/14/12/10 </div>
+	<br><br><br>
+	<p style="line-height: 0.2em;"><b>Способность: </b>направленная на юнита</p>
+	<p style="line-height: 0.2em;"><b>Действует на: </b>врагов</p>
+	<br>
+	<p style="line-height: 0.2em;"><b>Дальность применения: </b>800</p>
+	<p style="line-height: 0.2em;"><b>Радиус связки: </b>575</p>
+	<p style="line-height: 0.2em;"><b>Угол поиска связки: </b>46</p>
+	<p style="line-height: 0.2em;"><b>Максимальное кол-во целей: </b>2</p>
+	<p style="line-height: 0.2em;"><b>Максимальное оглушение: </b>2/2,6/3,2/3,8</p>
+	<p style="line-height: 0.2em;"><b>Минимальное оглушение: </b>0,75</p>
+	
+	
+	<span class="undertext">Мастерство владения луком позволяет Лиралей выпустить стрелу с толстой верёвкой, которая не даст жертве вырваться.</span>
+
+
+
+	<hr class="hr">
+	<h2 style="position: relative;text-align: center;">Powershot</h2>	
+	<img class="skillicon" src="power.png" align="left" alt="img">
+	<span>Герой заряжает лук, чтобы совершить мощный выстрел. Стрела наносит урон врагам. Урон увеличивается по мере зарядки, которая длится не более 1 сек., и снижается с каждым задетым врагом.</span>
+	<br><br>
+	<img src="mana.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px; float: left; width: 50%">Расход маны: 90/100/110/120</div>
+	<img src="cooldown.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px">Перезарядка:  12/11/10/9</div>
+	<br><br><br>
+	<p style="line-height: 0.2em;"><b>Способность: </b>прерываемая/направленная на точку</p>
+	<p style="line-height: 0.2em;"><b>Действует на: </b>врагов</p>
+	<p style="line-height: 0.2em;"><b>Тип урона: </b>магический</p>
+	<br>
+	<p style="line-height: 0.2em;"><b>Дальность применения: </b>2600</p>
+	<p style="line-height: 0.2em;"><b>Дистанция прохождения:  </b>3000</p>
+	<p style="line-height: 0.2em;"><b>Радиус урона: </b>125 </p>
+	<p style="line-height: 0.2em;"><b>Макс. время произнесения: </b>1 </p>
+	<p style="line-height: 0.2em;"><b>Макс. урон: </b>150/250/350/450(<b>Талант:  </b>0,7)</p></p>
+	<p style="line-height: 0.2em;"><b>Уменьшение урона за попадание по юниту: </b>20% </p>
+	<span class="undertext">В ранние годы своих тренировок Лиралей научилась стрелять мощными стрелами, которые на пути к своей цели пробивают даже деревья.</span>
+	
+
+	<hr class="hr">
+	<h2 style="position: relative;text-align: center;">Windrun</h2>	
+	<img class="skillicon" src="run.png" align="left" alt="img">
+	<span>Увеличивает скорость передвижения героя и позволяет ему уворачиваться от всех физических атак, при этом замедляя передвижение врагов поблизости.</span>
+	<br><br>
+	<img src="mana.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px; float: left; width: 50%">Расход маны: 50</div>
+	<img src="cooldown.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px">Перезарядка: 15/14/13/12 </div>
+	<br><br><br>
+	<p style="line-height: 0.2em;"><b>Способность: </b>ненаправленная</p>
+	<p style="line-height: 0.2em;"><b>Действует на: </b>врагов/себя</p>
+	<br>
+	<p style="line-height: 0.2em;"><b>Радиус замедления: </b>325</p>
+	<p style="line-height: 0.2em;"><b>Уклонение:</b>100%</p>
+	<p style="line-height: 0.2em;"><b>Доп. скорость передвижения: </b>60% </p>
+	<p style="line-height: 0.2em;"><b>Замедление скорости передвижения врагов: </b>15/20/25/30% </p>
+	<p style="line-height: 0.2em;"><b>Длительность задержки ауры: </b>2,5</p>
+	<p style="line-height: 0.2em;"><b>Длительность эффекта:</b>3/4/5/6 </p>
+	<span class="undertext">Лиралей зачаровывает порывы ветра, и они отражают удары по ней.</span>
+	
+	<hr class="hr">
+	<h2 style="position: relative;text-align: center;">Gale Force</h2>	
+	<img class="skillicon" src="gale.png" align="left" alt="img">
+	<span>Призывает могучий порыв ветра, который толкает в выбранном направлении всех врагов в области действия. Векторное применение.</span>
+	<br><br><br>
+	<img src="mana.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px; float: left; width: 50%">Расход маны: 150</div>
+	<img src="cooldown.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px">Перезарядка: 30</div>
+	<br><br><br>
+	<p style="line-height: 0.2em;"><b>Способность: </b>направленная на точку/векторное применение</p>
+	<p style="line-height: 0.2em;"><b>Действует на: </b>врагов</p>
+	<br>
+	<p style="line-height: 0.2em;"><b>Дальность применения: </b>1500 </p>
+	<p style="line-height: 0.2em;"><b>Радиус действия: </b>1000</p>
+	<p style="line-height: 0.2em;"><b>Скорость толчка:  </b>240 </p>
+	<p style="line-height: 0.2em;"><b>Длительность толчка:  </b>3</p>
+	<p style="line-height: 0.2em;"><b>Длительность задержки ауры: </b>0,5</p>
+	<p style="line-height: 0.2em;"><b>Для активации способности требуется Aghanim's Shard </b></p>
+	<span class="undertext">Лиралей наконец научилась взывать к мощи, принадлежащей ей по праву рождения.</span>
+	
+
+
+	<hr class="hr">
+	<h2 style="position: relative;text-align: center;">Focus Fire</h2>	
+	<img class="skillicon" src="focus.png" align="left" alt="img">
+	<span>Герой призывает вихрь, увеличивающий скорость его атаки по выбранному вражескому существу или строению на 300/400/500. Весь урон от этих атак будет уменьшен, за исключением урона от эффектов предметов.</span>
+	<br><br>
+	<img src="mana.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px;float: left; width: 50%"> Расход маны:  75/100/125
+</div>
+	<img src="cooldown.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px">Перезарядка: 70/50/30</div>
+	<br><br>
+	<p><b>Способность: </b>направленная на юнита</p>
+	<p style="line-height: 0.2em;"><b>Действует на: </b>себя</p>
+	<br>
+	<p style="line-height: 0.2em;"><b>Дальность применения: </b> 600</p>
+	<p style="line-height: 0.2em;"><b>Доп. скорость атаки: </b> 350/425/500</p>
+	<p style="line-height: 0.2em;"><b>Уменьшение урона: </b> 25% (Талант: 9%)</p>
+	<p style="line-height: 0.2em;"><b>Длительность: </b> 20</p>
+	<p style="line-height: 0.2em;"><b>Уменьшение перезарядки при убийстве жертвы Focus Fire: </b> 0 (Талант: 20)</p>
+	<span class="undertext">Способность Лиралей обрушить на оппонента шквал стрел — пусть и в ущерб точности — просто бесподобна.</span>
+
+
+	<hr class="hr">
+	<h2 style="position: relative;text-align: left;">Сборка/Builds</h2>
+	<h3>Начальный закуп:</h3>
+	<a class="item" href="https://dota2.ru/items/tango/" title="" alt="Tango"><img src="item/tango.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/mantle-of-intelligence/" alt="mantle of intelligence"><img src="item/mantle.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/enchanted-mango/" title="" alt="mango"><img src="item/mango.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/Circlet/" title="" alt="Circlet"><img src="item/Circlet.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/faerie-fire/" title="" alt="faerie fire"><img src="item/faerie_fire.png" alt=""></a>
+	<h3>Основные предметы:</h3>
+	<a class="item" href="https://dota2.ru/items/boots-of-speed/" title="" alt="boots of speed"><img src="item/boots.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/maelstrom/" title="" alt="maelstrom"><img src="item/maelstrom.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/orchid-malevolence/" title="" alt="orchid malevolence"><img src="item/orchid_malevolence.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/black-king-bar/" title="" alt="black_king_bar"><img src="item/black_king_bar.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/daedalus/" title="" alt="daedalus"><img src="item/daedalus.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/aghanims-scepter/" title="" alt="Aghanim's Scepter"><img src="item/aghanims-scepter.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/aghanims-shard/" title="" alt="Aghanim's shard"><img src="item/aghanims-shard.png" alt=""></a>
+	
+	
+	
+	<h3>YOUTUBE:GREYSHARK</h3>
+	<a class="item" href="https://dota2.ru/items/tome-of-knowledge/" title="" alt="Tome of Knowledge"><img src="item/tome.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/tome-of-knowledge/" title="" alt="Tome of Knowledge"><img src="item/tome.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/tome-of-knowledge/" title="" alt="Tome of Knowledge"><img src="item/tome.png" alt=""></a>
+	<br>
+	<a style="font-size: 25px; text-decoration: none; color: lightblue; text-align: left" href="https://www.youtube.com/@greyshark_official" >YOUTUBE:GREYSHARK</a>
+	<br>
+	<a style="font-size: 25px; text-decoration: none; color: lightblue;align: right;" href="https://steamcommunity.com/sharedfiles/filedetails/?id=437173545" >ИСПОЛЬЗОВАТЬ ЭТОТ ИМБА БИЛД</a>
+	<hr class="hr">
+	<a href="https://dota2.ru">  <img src="int.png" align="right"></a>
+	<br>
+	<br>
+	<a href="https://ci.nsu.ru">  <img src="vki.png" align="left"></a>
+	</div>
+	<div id="mySidenav" class="sidenav">
+  		<a style="color: lightblue;" href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  		<a href="https://dg-star.github.io">Main Menu</a>
+  		<a href="https://dota2.ru">Dota 2.ru</a>
+  		<a href="https://ci.nsu.ru">VKI NSU</a>
+  		<a href="#">Support us</a>
+  		<a href="https://dg-star.github.io/contact/contact.html">Contact</a>
+	</div>
+	
+</div>
+
+<script>
+	function openNav() {
+    	document.getElementById("mySidenav").style.width = "250px";
+    	document.getElementById("main").style.marginLeft = "250px";
+    	document.body.style.backgroundColor = "rgba(0,0,0,0.5)";
+	}
+
+	function closeNav() {
+    	document.getElementById("mySidenav").style.width = "0";
+    	document.getElementById("main").style.marginLeft= "0";
+    	document.body.style.backgroundColor = "white";
+	}
+</script>
+</div>
+</body>		
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
