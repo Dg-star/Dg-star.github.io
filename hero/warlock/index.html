@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Axe Builds</title>
+	<title>Warlock Builds</title>
 
 
 	<link rel="apple-touch-icon" sizes="57x57" href="icon/apple-icon-57x57.png">
@@ -23,12 +24,277 @@
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="icon/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
+<style>
+body,html{ height: 100%; color: darkred; font-family: Arial;margin: 0;}
+@media (min-width: 0px) {body {background: url(bgmobile.png);}}
+
+@media (min-width: 576px) {body {background: url(bgsm.png);}}
+
+@media (min-width: 768px) {body {background: url(bgmd.png);}}
+
+@media (min-width: 992px) {body {background: url(bglg.png);}}
+
+@media (min-width: 1200px) {body{background: url(bg.png);}}
+
+body{background-size: cover;background-position: center center;background-attachment: fixed;}
+
+.item {text-align: center;display: inline-block;overflow: hidden;position: relative;text-decoration: none;}
+
+.item:before {display: block;background-color: rgb(0, 0, 0);content: "";height: 100%;opacity: 0;position: absolute;width: 100%;z-index: 2;}
+
+.item:after {font-family: 'Lucida Console';color: white;content: attr(alt);display: block;font-size: 16px;opacity: 0;padding: 0 3%;position: absolute;text-transform: none;top: 50%;-webkit-transform-origin: 50% 0%;transform-origin: 50% 0%;-webkit-transform: scale(0) translateY(-50%);transform: scale(0) translateY(-50%);width: 94%;z-index: 3;}
+
+.item img {border: none;display: block;z-index: 1;}
+
+.item:after {-webkit-transition: all 350ms ease-in-out;transition: all 350ms ease-in-out;}
+
+.item:hover:before {opacity: 0.6;}
+
+.item:hover:after {opacity: 1;-webkit-transform: scale(1) translateY(-50%);transform: scale(1) translateY(-60%);}
 
 
+.hr{
+	border-color: darkred;
+}
+
+.skillicon{
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar{
+	width: 0;
+}
+
+.undertext{
+	font-size: 15px;
+	font-family: Arial;
+	color: gray;
+	opacity: 0.8;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    widht: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+</style>
+	
 </head>
 <body>
+	<div id="main">
+	<span style="font-size:30px;cursor:pointer; color: darkred;" onclick="openNav()">☰ open</span>	
 	<h1 style="position: relative;text-align: center;">Dota 2 Builds</h1>
-	<hr style="border-color: red;">
-	<h2 style="position: relative;text-align: left;">Axe</h2>
-</body>
+	<hr class="hr">
+	<h2 style="position: relative;text-align: left;">Warlock</h2>
+	<hr class="hr">
+	<span style="font-size: 20px">Будучи главой отдела реликвий запретных архивов Ультимирской академии, Дэмнок Лэнник посвятил себя поиску затерянных, редких и просто запретных томов. Ничто не могло заставить Дэмнока свернуть с его тропы, стоило ему прознать, что, быть может, в конце пути он найдет хотя бы жалкий кусочек свитка с древними знаниями — ни проклятые храмы, ни запутанные пещерные ходы, ничто. И так часто приходилось ему сталкиваться с агрессивными сущностями, оставленными защищать эти самые древние знания, что изучение магии, томы о которой он и искал, стало жизненной необходимостью. С таким же бесконечным энтузиазмом принялся Лэнник за учение, с каким отправлялся в опаснейшие походы за записями — и в результате превзошел всех чернокнижников Ультимирской академии за время, которого остальным хватало, только чтобы пройти самые первые курсы — и то не всегда. Практически по инерции он вырезал себе посох из дредвудского дерева и заточил в него дух демона из Глубин Ада. И начал, в ожидании нахождения самой последней затерянной книги с древними знаниями, писать свое собственное произведение — Черный Гримуар. Вне всякого сомнения, это будет одним из лучших обучающих пособий по прикладной демонологии в мире.</span>	
+	<hr class="hr">
+	<h2 style="position: relative;">Способности/Abulities</h2>
+
+
+	<hr class="hr">
+	<h2 style="position: relative;text-align: center;">Fatal Bonds</h2>	
+	<img class="skillicon" src="fatal.png" align="left" alt="img">
+	<span>Соединяет несколько врагов магической связью, в результате чего часть урона, полученного любым из них, наносится и остальным.</span>
+	<br><br>
+	<img src="mana.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px; float: left; width: 50%">Расход маны:110/120/130/140</div>
+	<img src="cooldown.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px">Перезарядка: 36/30/24/18 </div>
+	<br><br><br>
+	<p style="line-height: 0.2em;"><b>Способность: </b>направленная на юнита</p>
+	<p style="line-height: 0.2em;"><b>Действует на: </b>врагов</p>
+	<p style="line-height: 0.2em;"><b>Тип урона: </b>тип источника урона/без отражения</p>
+	<br>
+	<p style="line-height: 0.2em;"><b>Дальность отскоков: </b>700</p>
+	<p style="line-height: 0.2em;"><b>Число отскоков: </b>6</p>
+	<p style="line-height: 0.2em;"><b>Длительность: </b>25</p>
+	<p style="line-height: 0.2em;"><b>Дальность применения: </b>1000</p>
+	<p style="line-height: 0.2em;"><b>Распространяемый урон: </b>12%/16%/20%/24% (Талант: 16%/20%/24%/28%)</p>
+	
+	<span class="undertext">Древнее заклятие, которое объединяет жизненные силы различных существ в единую сущность.</span>
+
+
+
+	<hr class="hr">
+	<h2 style="position: relative;text-align: center;">Shadow Word</h2>	
+	<img class="skillicon" src="word.png" align="left" alt="img">
+	<span>Герой шепчет заклинание, постепенно излечивая союзника или нанося урон врагу.</span>
+	<br><br>
+	<img src="mana.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px; float: left; width: 50%">Расход маны: 120/130/140/150</div>
+	<img src="cooldown.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px">Перезарядка:  14 (Талант: 10)</div>
+	<br><br><br>
+	<p style="line-height: 0.2em;"><b>Способность: </b>направленная на юнита/направленная на область (с Aghanim's Shard)</p>
+	<p style="line-height: 0.2em;"><b>Действует на: </b>врагов/союзников</p>
+	<p style="line-height: 0.2em;"><b>Тип урона: </b>магический</p>
+	<br>
+	<p style="line-height: 0.2em;"><b>Дальность применения: </b>600/700/800/900</p>
+	<p style="line-height: 0.2em;"><b>Лечение/урон в секунду:  </b>15/25/35/45 (Талант: 40/50/60/70)</p>
+	<p style="line-height: 0.2em;"><b>Длительность: </b>10 </p>
+
+	<span class="undertext">Тайные искусства Демнока могут найти множество применений — будь то мощные исцеляющие чары либо губительное проклятье.</span>
+	
+
+	<hr class="hr">
+	<h2 style="position: relative;text-align: center;">Upheaval</h2>	
+	<img class="skillicon" src="upheaval.png" align="left" alt="img">
+	<span>Прерываемая — мощный замедляющий поток энергии, со временем становящийся сильнее. Действует до 10, 12, 14, 16 сек. Эффект сохраняется в течение 3 сек. после того, как враг покинул зону действия или способность прервалась.</span>
+	<br><br>
+	<img src="mana.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px; float: left; width: 50%">Расход маны: 70/80/90/100
+</div>
+	<img src="cooldown.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px">Перезарядка: 35 </div>
+	<br><br><br>
+	<p style="line-height: 0.2em;"><b>Способность: </b>направленная на область/прерываемая</p>
+	<p style="line-height: 0.2em;"><b>Действует на: </b>врагов/союзников (с талантом)</p>
+	<p style="line-height: 0.2em;"><b>Тип урона:  </b>магический</p>
+	<br>
+	<p style="line-height: 0.2em;"><b>Дальность применения:  </b>900</p>
+	<p style="line-height: 0.2em;"><b>Радиус:</b>500/550/600/650 </p>
+	<p style="line-height: 0.2em;"><b>Макс. длительность:</b> 10/12/14/16  </p>
+	<p style="line-height: 0.2em;"><b>Замедление скорости передвижения за секунду: </b>10/15/20/25% </p>
+	<p style="line-height: 0.2em;"><b>Максимальное замедление:</b>55/70/85/100%</p>
+	<p style="line-height: 0.2em;"><b>Увеличение урона в секунду:</b>10</p>
+	<p style="line-height: 0.2em;"><b>Максимальный урон в секунду:</b>35/60/85/110</p>
+	<p style="line-height: 0.2em;"><b>Доп. скорость атаки союзников в секунду:</b>0 (Талант: 12)</p>
+	<p style="line-height: 0.2em;"><b>Максимальная доп. скорость атаки союзников: </b> 0 (Талант: 70)</p>
+	<p style="line-height: 0.2em;"><b>Длительность замедления и бонуса:</b>0 (талант: 3) </p>
+
+	<span class="undertext">Демнок управляет пространством и временем, ослабляя целые армии.</span>
+	
+	
+
+	<hr class="hr">
+	<h2 style="position: relative;text-align: center;">Chaotic Offering</h2>	
+	<img class="skillicon" src="chaotic.png" align="left" alt="img">
+	<span>Вызывает из недр земли голема, оглушающего врагов на 1 секунду. Голем живёт 60 сек., получает меньше урона от заклинаний, обжигает всех врагов вокруг и имеет уникальный эффект атаки.</span>
+	<br><br>
+	<img src="mana.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px;float: left; width: 50%"> Расход маны:   250/375/500
+</div>
+	<img src="cooldown.png" alt="img" align="left"><div style="position: relative; left; font-size: 20px">Перезарядка: 160</div>
+	<br><br>
+	<p><b>Способность: </b>направленная на область</p>
+	<p style="line-height: 0.2em;"><b>Действует на: </b>врагов</p>
+	<br>
+	<p style="line-height: 0.2em;"><b>Дальность применения: </b> 1000</p>
+	<p style="line-height: 0.2em;"><b>Радиус оглушения: </b> 600</p>
+	<p style="line-height: 0.2em;"><b>Задержка: </b> 0,5</p>
+	<p style="line-height: 0.2em;"><b>Количество големов: </b> 1</p>
+	<p style="line-height: 0.2em;"><b>Длительность оглушения: </b> 1</p>
+	<p style="line-height: 0.2em;"><b>Время жизни голема: </b> 60</p>
+	<p style="line-height: 0.2em;"><b>Количество големов при смерти героя: </b> 0 (Талант: 1)</p>
+	<span class="undertext">Демнок выпускает из своего дредвудского посоха плененного духа, который разрушает вражеские ряды</span>
+
+
+	<hr class="hr">
+	<h2 style="position: relative;text-align: left;">Сборка/Builds</h2>
+	<h3>Начальный закуп:</h3>
+	<a class="item" href="https://dota2.ru/items/tango/" title="" alt="Tango"><img src="item/tango.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/enchanted-mango/" alt="enchanted mango"><img src="item/enchanted_mango.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/healing-salve/" title="" alt="healing salve"><img src="item/healing_salve.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/ward-observer/" title="" alt="ward observer"><img src="item/ward_observer.png" alt=""></a>
+	<h3>Основные предметы:</h3>
+	<a class="item" href="https://dota2.ru/items/arcane-boots/" title="" alt="Arcane Boots"><img src="item/arcane_boots.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/force-staff/" title="" alt="force staff"><img src="item/force_staff.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/glimmer-cape/" title="" alt="glimmer cape"><img src="item/glimmer_cape.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/aether-lens/" title="" alt="Aether Lens"><img src="item/aether_lens.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/aghanims-scepter/" title="" alt="Aghanim's Scepter"><img src="item/aghanims_scepter.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/aghanims-shard/" title="" alt="Aghanim's shard"><img src="item/aghanims_shard.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/refresher-orb/" title="" alt="Refresher Orb"><img src="item/refresher_orb.png" alt=""></a>
+	
+	
+	
+	<h3>YOUTUBE:GREYSHARK</h3>
+	<a class="item" href="https://dota2.ru/items/tome-of-knowledge/" title="" alt="Tome of Knowledge"><img src="item/tome.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/tome-of-knowledge/" title="" alt="Tome of Knowledge"><img src="item/tome.png" alt=""></a>
+	<a class="item" href="https://dota2.ru/items/tome-of-knowledge/" title="" alt="Tome of Knowledge"><img src="item/tome.png" alt=""></a>
+	<br>
+	<a style="font-size: 25px; text-decoration: none; color: lightblue; text-align: left" href="https://www.youtube.com/@greyshark_official" >YOUTUBE:GREYSHARK</a>
+	<br>
+	<a style="font-size: 25px; text-decoration: none; color: lightblue;align: right;" href="https://steamcommunity.com/sharedfiles/filedetails/?id=267870988" >ИСПОЛЬЗОВАТЬ ЭТОТ ИМБА БИЛД</a>
+	<hr class="hr">
+	<a href="https://dota2.ru">  <img src="int.png" align="right"></a>
+	<br>
+	<br>
+	<a href="https://ci.nsu.ru">  <img src="vki.png" align="left"></a>
+	</div>
+	<div id="mySidenav" class="sidenav">
+  		<a style="color: lightblue;" href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  		<a href="https://dg-star.github.io">Main Menu</a>
+  		<a href="https://dota2.ru">Dota 2.ru</a>
+  		<a href="https://ci.nsu.ru">VKI NSU</a>
+  		<a href="#">Support us</a>
+  		<a href="https://dg-star.github.io/contact/contact.html">Contact</a>
+	</div>
+	
+</div>
+
+<script>
+	function openNav() {
+    	document.getElementById("mySidenav").style.width = "250px";
+    	document.getElementById("main").style.marginLeft = "250px";
+    	document.body.style.backgroundColor = "rgba(0,0,0,0.5)";
+	}
+
+	function closeNav() {
+    	document.getElementById("mySidenav").style.width = "0";
+    	document.getElementById("main").style.marginLeft= "0";
+    	document.body.style.backgroundColor = "white";
+	}
+</script>
+</div>
+</body>		
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
