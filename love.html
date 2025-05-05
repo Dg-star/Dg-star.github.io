@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>Я люблю тебя</title>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
@@ -43,11 +45,25 @@
             position: absolute;
             color: #ff0000;
             animation: fall linear infinite;
-            user-select: none;
             cursor: pointer;
             z-index: 10;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+            -webkit-tap-highlight-color: transparent;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-user-drag: none;
+            -khtml-user-drag: none;
+            -moz-user-drag: none;
+            -o-user-drag: none;
+            user-drag: none;
             -webkit-touch-callout: none;
-        }
+            touch-action: manipulation;
+            user-select: none;
+            outline: none !important;
+            box-shadow: none !important;
+}
 
         @keyframes fall {
             from { top: -50px; }
@@ -91,11 +107,45 @@
             const heart = document.createElement('div');
             heart.className = 'heart';
             heart.innerHTML = '❤';
+            heart.setAttribute('unselectable', 'on');
+            heart.setAttribute('onselectstart', 'return false;');
+            heart.setAttribute('onmousedown', 'return false;');
+            
             heart.style.left = Math.random() * 100 + '%';
             heart.style.fontSize = (Math.random() * 20 + 10) + 'px';
             heart.style.animationDuration = (Math.random() * 3 + 2) + 's';
             
-            heart.addEventListener('click', function(e) {
+            // Обработчики для мобильных устройств
+            heart.addEventListener('touchstart', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                this.style.transform = 'scale(0.95)';
+                handleHeartClick(e);
+            }, { passive: false });
+
+            heart.addEventListener('touchend', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                this.style.transform = 'scale(1)';
+            }, { passive: false });
+
+            heart.addEventListener('touchmove', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+            }, { passive: false });
+
+            // Обработчик для десктопов
+            heart.addEventListener('click', handleHeartClick);
+
+            document.body.appendChild(heart);
+            
+            setTimeout(() => {
+                if (heart.parentNode) {
+                    heart.remove();
+                }
+            }, 5000);
+
+            function handleHeartClick(e) {
                 // Создаем надпись Oups! на месте сердечка
                 const oups = document.createElement('div');
                 oups.className = 'oups';
@@ -112,15 +162,7 @@
                 setTimeout(() => {
                     oups.remove();
                 }, 1000);
-            });
-
-            document.body.appendChild(heart);
-            
-            setTimeout(() => {
-                if (heart.parentNode) {
-                    heart.remove();
-                }
-            }, 5000);
+            }
         }
 
         // Запуск создания сердечек
