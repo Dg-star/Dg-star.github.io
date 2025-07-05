@@ -32,10 +32,26 @@
     <h1>Ты веришь мне?</h1>
     <button onclick="sendAction('trust')">Верю, но проверю</button>
     <button onclick="sendAction('NoButton')">Нет</button>
-    <button onclick="sendAction('showMore')">Покажи ещё</button>
+    <button onclick="showGallery()">Покажи ещё</button>
   </div>
 
   <div id="hearts-container"></div>
+
+  <!-- Галерея (изначально скрыта и не загружает фото) -->
+  <div id="gallery-modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close" onclick="closeGallery()">&times;</span>
+      <div class="photo-container">
+        <img id="gallery-image" alt="Наше фото">
+      </div>
+      <div class="gallery-controls">
+        <button onclick="prevPhoto()">← Назад</button>
+        <span id="photo-counter"></span>
+        <button onclick="nextPhoto()">Вперёд →</button>
+      </div>
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>

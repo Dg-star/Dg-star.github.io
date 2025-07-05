@@ -1,57 +1,14 @@
-// Конфигурация Telegram
+// Конфигурация
 const BOT_TOKEN = "7663707783:AAH-GS_qnl62pihtkSK5fJG5QFehO0tMph0";
 const CHAT_ID = "6019129874";
+let currentPhotoIndex = 1;
+const TOTAL_PHOTOS = 10;
 
-// Переключение экранов
-function nextScreen() {
-  const current = document.querySelector('.screen:not(.hidden)');
-  const next = current.nextElementSibling;
-  
-  if (next) {
-    current.classList.add('hidden');
-    next.classList.remove('hidden');
-    sendAction(`read_screen_${current.id.slice(-1)}`);
-  }
-}
-
-// Отправка действия в Telegram
-async function sendAction(action) {
-  let message;
-  
-  switch (action) {
-    case 'trust':
-      message = "💌 Она нажала 'Верю, но проверю'";
-      break;
-    case 'showMore':
-      message = "📸 Она хочет увидеть больше";
-      showGallery();
-      break;
-    case 'clicked_heart':
-      message = "💔 Она разбила сердечко";
-      break;
-    case 'NoButton':
-      message = "😔 Она нажала 'Нет'";
-      NoButtonClick();
-      break;
-    default:
-      message = `Действие: ${action}`;
-  }
-  
-  try {
-    await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${encodeURIComponent(message)}`);
-  } catch (err) {
-    console.error("Ошибка отправки:", err);
-  }
-}
-
-// Вспомогательные функции
-function showGallery() {
-  alert("Здесь будут наши лучшие моменты...");
-}
-
-function NoButtonClick() {
-  alert("Я сделаю всё, чтобы заслужить твоё доверие...");
-}
+// Инициализация
+window.onload = function() {
+  createHearts();
+  document.addEventListener('touchstart', function(){}, {passive: true});
+};
 
 // Система сердечек
 function createHearts() {
@@ -84,8 +41,100 @@ function createHearts() {
   }, 400);
 }
 
-// Инициализация
-window.onload = function() {
-  createHearts();
-  document.addEventListener('touchstart', function(){}, {passive: true});
-};
+// Навигация по экранам
+function nextScreen() {
+  const current = document.querySelector('.screen:not(.hidden)');
+  const next = current.nextElementSibling;
+  
+  if (next) {
+    current.classList.add('hidden');
+    next.classList.remove('hidden');
+    sendAction(`read_screen_${current.id.slice(-1)}`);
+  }
+}
+
+// Галерея фотографий (теперь фото грузятся только при открытии)
+function showGallery() {
+  const modal = document.getElementById('gallery-modal');
+  const img = document.getElementById('gallery-image');
+  
+  // Показываем модальное окно
+  modal.style.display = 'flex';
+  
+  // Загружаем первое фото только сейчас
+  currentPhotoIndex = 1;
+  img.src = `photos/${currentPhotoIndex}.jpg`;
+  document.getElementById('photo-counter').textContent = `${currentPhotoIndex}/${TOTAL_PHOTOS}`;
+  
+  // Обработчики ошибок
+  img.onerror = function() {
+    this.src = 'placeholder.jpg';
+    console.log("Ошибка загрузки фото");
+  };
+  
+  sendAction('gallery_opened');
+}
+
+function closeGallery() {
+  document.getElementById('gallery-modal').style.display = 'none';
+}
+
+function updateGalleryImage() {
+  const img = document.getElementById('gallery-image');
+  img.src = `photos/${currentPhotoIndex}.jpg`;
+  document.getElementById('photo-counter').textContent = `${currentPhotoIndex}/${TOTAL_PHOTOS}`;
+}
+
+function nextPhoto() {
+  if (currentPhotoIndex < TOTAL_PHOTOS) {
+    currentPhotoIndex++;
+    updateGalleryImage();
+    sendAction(`viewed_photo_${currentPhotoIndex}`);
+  }
+}
+
+function prevPhoto() {
+  if (currentPhotoIndex > 1) {
+    currentPhotoIndex--;
+    updateGalleryImage();
+    sendAction(`viewed_photo_${currentPhotoIndex}`);
+  }
+}
+
+// Обработчики кнопок
+function NoButtonClick() {
+  alert("Я сделаю всё, чтобы заслужить твоё доверие...");
+  sendAction('pressed_no');
+}
+
+// Отправка действий в Telegram
+async function sendAction(action) {
+  let message;
+  
+  switch (action) {
+    case 'trust':
+      message = "💌 Она нажала 'Верю, но проверю'";
+      break;
+    case 'gallery_opened':
+      message = "🖼️ Она открыла галерею";
+      break;
+    case 'pressed_no':
+      message = "😔 Она нажала 'Нет'";
+      break;
+    case 'clicked_heart':
+      message = "💔 Она разбила сердечко";
+      break;
+    default:
+      if (action.startsWith('viewed_photo')) {
+        message = `📸 Она смотрит фото ${action.split('_')[2]}`;
+      } else {
+        message = `Действие: ${action}`;
+      }
+  }
+  
+  try {
+    await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${encodeURIComponent(message)}`);
+  } catch (err) {
+    console.error("Ошибка отправки:", err);
+  }
+}
