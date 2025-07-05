@@ -104,7 +104,10 @@ function prevPhoto() {
 // Обработчики кнопок
 function NoButtonClick() {
   alert("Я сделаю всё, чтобы заслужить твоё доверие...");
-  sendAction('pressed_no');
+}
+
+function YesButtonClick() {
+  alert("<3");
 }
 
 // Отправка действий в Telegram
@@ -114,12 +117,14 @@ async function sendAction(action) {
   switch (action) {
     case 'trust':
       message = "💌 Она нажала 'Верю, но проверю'";
+      YesButtonClick();
       break;
     case 'gallery_opened':
       message = "🖼️ Она открыла галерею";
       break;
     case 'pressed_no':
       message = "😔 Она нажала 'Нет'";
+      NoButtonClick();
       break;
     case 'clicked_heart':
       message = "💔 Она разбила сердечко";
