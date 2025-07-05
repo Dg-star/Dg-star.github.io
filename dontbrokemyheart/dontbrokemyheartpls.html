@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Я понял...</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="screen" id="screen1">
+    <h1>Я понял</h1>
+    <p>Ты не ресурс. Ты — человек, которого я люблю...</p>
+    <p>Ты не должна жить в беспокойстве...</p>
+    <button onclick="nextScreen()">→</button>
+  </div>
+  
+  <div class="screen hidden" id="screen2">
+    <h1>Что я осознал</h1>
+    <p>Я редко ухаживал за тобой и ты не чувствовала себя нужной и любимой...</p>
+    <p>Я часто не сдерживал свои обещания...</p>
+    <button onclick="nextScreen()">→</button>
+  </div>
+
+  <div class="screen hidden" id="screen3">
+    <h1>Как исправляюсь</h1>
+    <p>Сделаю зону комфорта, в которой ты будешь чувствовать себя королевой...</p>
+    <p>Начну сдерживать свои слова, потому что это очень важно в отношениях...</p>
+    <button onclick="nextScreen()">→</button>
+  </div>
+
+  <div class="screen hidden" id="screen4">
+    <h1>Ты веришь мне?</h1>
+    <button onclick="sendAction('trust')">Верю, но проверю</button>
+    <button onclick="sendAction('NoButton')">Нет</button>
+    <button onclick="sendAction('showMore')">Покажи ещё</button>
+  </div>
+
+  <div id="hearts-container"></div>
+  <script src="script.js"></script>
+</body>
+</html>
